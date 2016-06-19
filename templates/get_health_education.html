@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Function</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        em {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<table border="1" width="100%">
+        {% load staticfiles %}
+        <tr> <td colspan="10">衛教單查詢</td></tr>
+        {% if dataObj  %}
+            {% for row in dataObj %}
+                <tr>
+                    <td width="10%"> <a href= {{ row.link }}> {{ row.edu_num }} </a></td>
+                    <td width="90%"> <a href= {{ row.link }}> {{ row.edu_name }} </a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+                <tr><td> 沒有衛教單查詢可供查詢 </td></tr>
+        {% endif %}
+
+        <tr> <td colspan="10">執行時間 : {{current_time}}  </td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test of Result</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        em {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+
+    <table border="1" width="80%">
+        <tr> <td colspan="2">select * from Schedule </td></tr>
+        <tr  bgcolor="#f0f8ff"> <td>form_no</td>  <td>form_name</td> </tr>
+        {% for foo in scheduletb %}
+            <tr> <td>{{ foo.form_no }} </td> <td>{{ foo.form_name }} </td>
+            {% empty %}
+            <tr><td> DataBase Connect Error !!</td></tr>
+        {% endfor %}
+        <tr> <td colspan="2">執行時間 : {{current_time}}  </td></tr>
+    </table>
+
+</body>
+</html>

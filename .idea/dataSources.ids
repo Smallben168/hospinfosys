@@ -1,0 +1,5391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Django default" uuid="e10e54fe-f5e4-4be0-930d-548c77532956">
+    <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="hismax"/>
+      <table id="2" parent="1" name="django_migrations"/>
+      <table id="3" parent="1" name="auth_group"/>
+      <table id="4" parent="1" name="auth_group_permissions"/>
+      <table id="5" parent="1" name="auth_permission"/>
+      <table id="6" parent="1" name="auth_user"/>
+      <table id="7" parent="1" name="auth_user_groups"/>
+      <table id="8" parent="1" name="auth_user_user_permissions"/>
+      <table id="9" parent="1" name="django_admin_log"/>
+      <table id="10" parent="1" name="django_content_type"/>
+      <table id="11" parent="1" name="django_session"/>
+      <table id="12" parent="1" name="register_device"/>
+      <table id="13" parent="1" name="beacon_info"/>
+      <table id="14" parent="1" name="dept_location">
+        <comment>Beacon位置設定檔</comment>
+      </table>
+      <table id="15" parent="1" name="patient_trace"/>
+      <table id="16" parent="1" name="OPDACNT">
+        <comment>門診帳檔</comment>
+      </table>
+      <table id="17" parent="1" name="PATOPD">
+        <comment>門診主檔&#xd;
+                                掛號主檔己刪除, 掛號資料合併至門診主檔&#xd;
+                                門診批價時須Check BLOCKED,當BLOCKED ISNOTNULL 時不可批價&#xd;
+                                醫囑住院時產生住院主檔, 其STATUS值為&apos;0&apos;尚未住院</comment>
+      </table>
+      <table id="18" parent="1" name="AREA">
+        <comment>區域代碼檔</comment>
+      </table>
+      <table id="19" parent="1" name="BILAMT">
+        <comment>帳單金額明細檔&#xd;
+                                門住診共用</comment>
+      </table>
+      <table id="20" parent="1" name="BILL">
+        <comment>帳單檔(門住診共用)</comment>
+      </table>
+      <table id="21" parent="1" name="CHART1">
+        <comment>看診資料</comment>
+      </table>
+      <table id="22" parent="1" name="CLIN">
+        <comment>診間檔</comment>
+      </table>
+      <table id="23" parent="1" name="CLINIC">
+        <comment>門診時間表</comment>
+      </table>
+      <table id="24" parent="1" name="CLINNO">
+        <comment>診號檔</comment>
+      </table>
+      <table id="25" parent="1" name="DOCTORDOC">
+        <comment>醫師資料說明檔</comment>
+      </table>
+      <table id="26" parent="1" name="DOCTORHE">
+        <comment>申報醫師檔</comment>
+      </table>
+      <table id="27" parent="1" name="EMPLOYEE">
+        <comment>員工資料</comment>
+      </table>
+      <table id="28" parent="1" name="FEENAME">
+        <comment>費用名稱&#xd;
+                                 (請透過 view acntfeename, recfeename, opdhefeename, inphefeename存取)&#xd;
+                                 ACNT	費用帳號&#xd;
+                                 REC	收據費用名稱&#xd;
+                                 INPHE	住院申報費用名稱&#xd;
+                                 OPDHE 門診申報費用名稱</comment>
+      </table>
+      <table id="29" parent="1" name="FIRSTVIEW">
+        <comment>初診預約資料</comment>
+      </table>
+      <table id="30" parent="1" name="HOSPSET"/>
+      <table id="31" parent="1" name="PAYAMT">
+        <comment>批價收費檔明細</comment>
+      </table>
+      <table id="32" parent="1" name="PAYMENT">
+        <comment>收費檔</comment>
+      </table>
+      <table id="33" parent="1" name="PRICE4">
+        <comment>連帶批價</comment>
+      </table>
+      <table id="34" parent="1" name="PRICEHE"/>
+      <table id="35" parent="1" name="REG">
+        <comment>掛號記錄</comment>
+      </table>
+      <table id="36" parent="1" name="CHART">
+        <comment>病歷主檔</comment>
+      </table>
+      <table id="37" parent="1" name="CLINPS">
+        <comment>診間位置檔</comment>
+      </table>
+      <table id="38" parent="1" name="DISICD">
+        <comment>疾病分類代碼</comment>
+      </table>
+      <table id="39" parent="1" name="DIVISION">
+        <comment>科別</comment>
+      </table>
+      <table id="40" parent="1" name="HOSPITAL">
+        <comment>醫院基本維護檔</comment>
+      </table>
+      <table id="41" parent="1" name="PRICE">
+        <comment>批價基本資料</comment>
+      </table>
+      <table id="42" parent="1" name="PTTYPE">
+        <comment>患者身份檔</comment>
+      </table>
+      <table id="43" parent="1" name="REQUISITION"/>
+      <table id="44" parent="1" name="SCHEDULE">
+        <comment>約診表單</comment>
+      </table>
+      <table id="45" parent="1" name="MEDICINE">
+        <comment>藥典資料</comment>
+      </table>
+      <table id="46" parent="1" name="MEDICINEPHOTO"/>
+      <table id="47" parent="1" name="MEDINTERACT">
+        <comment>藥物交互作用設定檔</comment>
+      </table>
+      <table id="48" parent="1" name="mombook"/>
+      <table id="49" parent="1" name="patient_status"/>
+      <table id="50" parent="1" name="patient_servicelist"/>
+      <table id="51" parent="1" name="patient_serviceno"/>
+      <table id="52" parent="1" name="seqno"/>
+      <table id="53" parent="1" name="bOPDACNT">
+        <comment>門診帳檔</comment>
+      </table>
+      <table id="54" parent="1" name="bPATOPD">
+        <comment>門診主檔&#xd;
+                                掛號主檔己刪除, 掛號資料合併至門診主檔&#xd;
+                                門診批價時須Check BLOCKED,當BLOCKED ISNOTNULL 時不可批價&#xd;
+                                醫囑住院時產生住院主檔, 其STATUS值為&apos;0&apos;尚未住院</comment>
+      </table>
+      <table id="55" parent="1" name="health_education"/>
+      <column id="56" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="57" parent="2" name="app">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="58" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="59" parent="2" name="applied">
+        <mandatory>1</mandatory>
+        <data-type>datetime(6)</data-type>
+      </column>
+      <key id="60" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="61" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="62" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <index id="63" parent="3" name="name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="64" parent="3" name="name">
+        <columns>name</columns>
+        <underlying-index>name</underlying-index>
+      </key>
+      <key id="65" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="66" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="67" parent="4" name="group_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="68" parent="4" name="permission_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="69" parent="4" name="auth_group_permissions_group_id_0cd325b0_uniq">
+        <columns>group_id
+permission_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="70" parent="4" name="auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id">
+        <columns>permission_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="71" parent="4" name="auth_group_permissions_group_id_0cd325b0_uniq">
+        <columns>group_id
+permission_id</columns>
+        <underlying-index>auth_group_permissions_group_id_0cd325b0_uniq</underlying-index>
+      </key>
+      <key id="72" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="73" parent="4" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
+        <columns>group_id</columns>
+        <ref-key>~.auth_group.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="74" parent="4" name="auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id">
+        <columns>permission_id</columns>
+        <ref-key>~.auth_permission.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="75" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="5" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="77" parent="5" name="content_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="5" name="codename">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="79" parent="5" name="auth_permission_content_type_id_01ab375a_uniq">
+        <columns>content_type_id
+codename</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="80" parent="5" name="auth_permission_content_type_id_01ab375a_uniq">
+        <columns>content_type_id
+codename</columns>
+        <underlying-index>auth_permission_content_type_id_01ab375a_uniq</underlying-index>
+      </key>
+      <key id="81" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="82" parent="5" name="auth_permissi_content_type_id_2f476e4b_fk_django_content_type_id">
+        <columns>content_type_id</columns>
+        <ref-key>~.django_content_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="83" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="84" parent="6" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="85" parent="6" name="last_login">
+        <data-type>datetime(6)</data-type>
+      </column>
+      <column id="86" parent="6" name="is_superuser">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="87" parent="6" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="88" parent="6" name="first_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="89" parent="6" name="last_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="90" parent="6" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(254)</data-type>
+      </column>
+      <column id="91" parent="6" name="is_staff">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="92" parent="6" name="is_active">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="93" parent="6" name="date_joined">
+        <mandatory>1</mandatory>
+        <data-type>datetime(6)</data-type>
+      </column>
+      <index id="94" parent="6" name="username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="95" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="96" parent="6" name="username">
+        <columns>username</columns>
+        <underlying-index>username</underlying-index>
+      </key>
+      <column id="97" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="98" parent="7" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="99" parent="7" name="group_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="100" parent="7" name="auth_user_groups_group_id_97559544_fk_auth_group_id">
+        <columns>group_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="101" parent="7" name="auth_user_groups_user_id_94350c0c_uniq">
+        <columns>user_id
+group_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="102" parent="7" name="auth_user_groups_user_id_94350c0c_uniq">
+        <columns>user_id
+group_id</columns>
+        <underlying-index>auth_user_groups_user_id_94350c0c_uniq</underlying-index>
+      </key>
+      <key id="103" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="104" parent="7" name="auth_user_groups_group_id_97559544_fk_auth_group_id">
+        <columns>group_id</columns>
+        <ref-key>~.auth_group.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="105" parent="7" name="auth_user_groups_user_id_6a12ed8b_fk_auth_user_id">
+        <columns>user_id</columns>
+        <ref-key>~.auth_user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="106" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="107" parent="8" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="8" name="permission_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="109" parent="8" name="auth_user_user_permissions_user_id_14a6b632_uniq">
+        <columns>user_id
+permission_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="110" parent="8" name="auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id">
+        <columns>permission_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="111" parent="8" name="auth_user_user_permissions_user_id_14a6b632_uniq">
+        <columns>user_id
+permission_id</columns>
+        <underlying-index>auth_user_user_permissions_user_id_14a6b632_uniq</underlying-index>
+      </key>
+      <key id="112" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="113" parent="8" name="auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id">
+        <columns>user_id</columns>
+        <ref-key>~.auth_user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="114" parent="8" name="auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id">
+        <columns>permission_id</columns>
+        <ref-key>~.auth_permission.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="115" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="116" parent="9" name="action_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime(6)</data-type>
+      </column>
+      <column id="117" parent="9" name="object_id">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="118" parent="9" name="object_repr">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="119" parent="9" name="action_flag">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned</data-type>
+      </column>
+      <column id="120" parent="9" name="change_message">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="121" parent="9" name="content_type_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="9" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="123" parent="9" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="124" parent="9" name="django_admin__content_type_id_c4bce8eb_fk_django_content_type_id">
+        <columns>content_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="125" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="126" parent="9" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
+        <columns>user_id</columns>
+        <ref-key>~.auth_user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="127" parent="9" name="django_admin__content_type_id_c4bce8eb_fk_django_content_type_id">
+        <columns>content_type_id</columns>
+        <ref-key>~.django_content_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="128" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="129" parent="10" name="app_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="130" parent="10" name="model">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="131" parent="10" name="django_content_type_app_label_76bd3d3b_uniq">
+        <columns>app_label
+model</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="132" parent="10" name="django_content_type_app_label_76bd3d3b_uniq">
+        <columns>app_label
+model</columns>
+        <underlying-index>django_content_type_app_label_76bd3d3b_uniq</underlying-index>
+      </key>
+      <key id="133" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="134" parent="11" name="session_key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="135" parent="11" name="session_data">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="136" parent="11" name="expire_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime(6)</data-type>
+      </column>
+      <index id="137" parent="11" name="django_session_de54fa62">
+        <columns>expire_date</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="138" parent="11" name="PRIMARY">
+        <columns>session_key</columns>
+        <primary>1</primary>
+      </key>
+      <column id="139" parent="12" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="12" name="CHART_NO">
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="141" parent="12" name="ID_NO">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="142" parent="12" name="BIRTH_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="143" parent="12" name="REGISTRATION_ID">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="144" parent="12" name="REGISTER_DATETIME">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="145" parent="12" name="EFF_FLAG">
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="146" parent="12" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="147" parent="13" name="ID">
+        <comment>sequence key</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="148" parent="13" name="UUID">
+        <comment>beacon uuid</comment>
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="149" parent="13" name="LOCATION_CODE">
+        <comment>refence Hosp_Location.location_code</comment>
+        <data-type>char(5)</data-type>
+      </column>
+      <column id="150" parent="13" name="MAJOR">
+        <comment>Beacon of Major</comment>
+        <data-type>char(5)</data-type>
+      </column>
+      <column id="151" parent="13" name="MINOR">
+        <data-type>char(5)</data-type>
+      </column>
+      <column id="152" parent="13" name="EFF_FLAG">
+        <comment>Y或N</comment>
+        <data-type>char(1)</data-type>
+      </column>
+      <key id="153" parent="13" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="154" parent="14" name="LOCATION_CODE">
+        <comment>位置代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="155" parent="14" name="LOCATION_TYPE">
+        <comment>A : 掛號室 B:衛教室 C:科室 D:批價 E:診間 Z:服務台</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="156" parent="14" name="ZONE">
+        <comment>院區</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="157" parent="14" name="CLINIC">
+        <comment>診間號(只用於診間)</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="158" parent="14" name="LOCATION_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="159" parent="14" name="PRIMARY">
+        <columns>LOCATION_CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="160" parent="15" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="15" name="REC_DATETIME">
+        <comment>記錄時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="162" parent="15" name="LOCATION_CODE">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="163" parent="15" name="CHART_NO">
+        <data-type>int(7)</data-type>
+      </column>
+      <key id="164" parent="15" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="165" parent="16" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="166" parent="16" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="167" parent="16" name="CHART_NO">
+        <comment>病歷號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="168" parent="16" name="DUPLICATE_NO">
+        <comment>看診次數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="169" parent="16" name="REC_COUNT">
+        <comment>筆數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="170" parent="16" name="CODE">
+        <comment>批價代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="171" parent="16" name="IDENTIFY_NO">
+        <comment>醫令識別碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="172" parent="16" name="ACNT_NO">
+        <comment>帳號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="173" parent="16" name="PRICE_TYPE">
+        <comment>批價類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="174" parent="16" name="QTY">
+        <comment>單次劑量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(6)</data-type>
+      </column>
+      <column id="175" parent="16" name="UNUSE">
+        <comment>非常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="176" parent="16" name="USE">
+        <comment>常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="177" parent="16" name="USETIME">
+        <comment>使用時間</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="178" parent="16" name="DAY">
+        <comment>用藥天數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="179" parent="16" name="TQTY">
+        <comment>總用量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="180" parent="16" name="SELF">
+        <comment>自費否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="181" parent="16" name="DISCOUNT">
+        <comment>折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="182" parent="16" name="COMP_DISCOUNT">
+        <comment>電腦折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="183" parent="16" name="AMT">
+        <comment>金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="184" parent="16" name="HE_ADD_FEE">
+        <comment>健保補差額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="185" parent="16" name="METHOD">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="186" parent="16" name="METHOD1">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="187" parent="16" name="METHOD2">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="188" parent="16" name="EMG">
+        <comment>急作否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="189" parent="16" name="ADD_RATE">
+        <comment>加成比率</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="190" parent="16" name="OFFICE">
+        <comment>入帳科室</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="191" parent="16" name="STOCK">
+        <comment>庫別</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="192" parent="16" name="DOCTOR_NO">
+        <comment>開單醫師</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="193" parent="16" name="ORDER_DATETIME">
+        <comment>處方開立時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="194" parent="16" name="EXEC_CLERK">
+        <comment>執行人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="195" parent="16" name="EXEC_DATETIME">
+        <comment>執行日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="196" parent="16" name="REPORT_CLERK">
+        <comment>報告人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="197" parent="16" name="REPORT_DATETIME">
+        <comment>報告日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="198" parent="16" name="CASHIER">
+        <comment>收費員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="199" parent="16" name="KEYIN_DATETIME">
+        <comment>輸入日期時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="200" parent="16" name="KEYIN_CLERK">
+        <comment>輸入員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="201" parent="16" name="MODIFY_DATETIME">
+        <comment>修改日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="202" parent="16" name="MODIFY_CLERK">
+        <comment>修改人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="203" parent="16" name="REQ_NO">
+        <comment>單據編號</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="204" parent="16" name="OPERATION">
+        <comment>開刀別(主副刀)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="205" parent="16" name="GRIND">
+        <comment>磨粉(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="206" parent="16" name="CONS_NO">
+        <comment>用藥限制選擇</comment>
+        <data-type>varchar(70)</data-type>
+      </column>
+      <column id="207" parent="16" name="NOEXE_REASON">
+        <comment>檢查不執行原因</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="208" parent="16" name="OFFICE1">
+        <comment>成本科室</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="209" parent="16" name="MAX_PRICE_TIMES">
+        <comment>批價序</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="210" parent="16" name="ORDER_POS">
+        <comment>處置部位(參考JUSTNAME/ORDER_POS)</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="211" parent="16" name="START_DATE">
+        <comment>執行日期-起</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="212" parent="16" name="START_TIME">
+        <comment>執行時間-起</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="213" parent="16" name="END_DATE">
+        <comment>執行日期-迄</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="214" parent="16" name="END_TIME">
+        <comment>執行時間-迄</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="215" parent="16" name="DICOM_FLAG">
+        <comment>影像來源(1:複製片;2:PACS;3:行政院衛生署全國醫療影像交換中心;9:其他)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="216" parent="16" name="PROJECT_NO">
+        <comment>事前審查受理編號</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <index id="217" parent="16" name="OPDACNT_CHART_NO">
+        <columns>CHART_NO
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="218" parent="16" name="OPDACNT_CODE_DATE">
+        <columns>CODE
+VIEW_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="219" parent="16" name="OPDACNT_REQNO_EXEC">
+        <columns>REQ_NO
+EXEC_DATETIME
+EXEC_CLERK</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="220" parent="16" name="OPDACNT_REQ_NO">
+        <columns>REQ_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="221" parent="16" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="222" parent="17" name="ID">
+        <comment>PKEY</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="223" parent="17" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="224" parent="17" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="225" parent="17" name="DUPLICATE_NO">
+        <comment>重複序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="226" parent="17" name="DOCTOR_NO">
+        <comment>醫師代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="227" parent="17" name="DIV_NO">
+        <comment>科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="228" parent="17" name="CASH_TYPE">
+        <comment>收費類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="229" parent="17" name="FV_RV">
+        <comment>初診/複診 (1.初診 2.複診)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="230" parent="17" name="SEND_CHART">
+        <comment>送病歷否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="231" parent="17" name="PT_TYPE">
+        <comment>患者身份</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="232" parent="17" name="CARD_SEQ">
+        <comment>卡號</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="233" parent="17" name="PART_NO">
+        <comment>部份負擔代碼</comment>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="234" parent="17" name="EXPECT_VIEW_TIME">
+        <comment>預計看診時間</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="235" parent="17" name="COMEFROM_NO">
+        <comment>合約機構</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="236" parent="17" name="REGKIND_NO">
+        <comment>看診目的</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="237" parent="17" name="VISIT">
+        <comment>看診否N未看U未完成F完成</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="238" parent="17" name="SHEET_NO">
+        <comment>調閱單號碼</comment>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="239" parent="17" name="APPOINTMENT">
+        <comment>june:預約方式(1.現掛 2.預約)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="240" parent="17" name="CHECK_IN_DATETIME">
+        <comment>報到時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="241" parent="17" name="GIVE_ORDER">
+        <comment>(0/1/2)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="242" parent="17" name="APN">
+        <comment>(1/2/3)時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(1)</data-type>
+      </column>
+      <column id="243" parent="17" name="ZONE">
+        <comment>(A..Z)院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="244" parent="17" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="245" parent="17" name="VIEW_NO">
+        <comment>看診號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="246" parent="17" name="SUPPLE_FLAG">
+        <comment>(1/2/3)欠單否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="247" parent="17" name="SUPPLE_DATETIME">
+        <comment>補卡日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="248" parent="17" name="SUPPLE_CLERK">
+        <comment>補卡退押人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="249" parent="17" name="DISCOUNT_PTR">
+        <comment>折扣代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="250" parent="17" name="DISEASE_CODE">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="251" parent="17" name="DISEASE_NAME">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="252" parent="17" name="DISEASE_CODE1">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="253" parent="17" name="DISEASE_NAME1">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="254" parent="17" name="DISEASE_CODE2">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="255" parent="17" name="DISEASE_NAME2">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="256" parent="17" name="DISEASE_CODE3">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="257" parent="17" name="DISEASE_NAME3">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="258" parent="17" name="DISEASE_CODE4">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="259" parent="17" name="DISEASE_NAME4">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="260" parent="17" name="DISEASE_CODE5">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="261" parent="17" name="DISEASE_NAME5">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="262" parent="17" name="DISEASE_CODE6">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="263" parent="17" name="DISEASE_NAME6">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="264" parent="17" name="OP_ICD9">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="265" parent="17" name="OP_ICD9_1">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="266" parent="17" name="OP_ICD9_2">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="267" parent="17" name="OP_ICD9_3">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="268" parent="17" name="OP_ICD9_4">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="269" parent="17" name="TRANS_IN">
+        <comment>轉入醫療院所</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="270" parent="17" name="PRICING_CLERK">
+        <comment>由誰批價中</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="271" parent="17" name="DRG_CODE">
+        <comment>DRG碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="272" parent="17" name="POST_REG_FLAG">
+        <comment>出掛號費否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="273" parent="17" name="POST_ATTEND_FEE">
+        <comment>出診察費否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="274" parent="17" name="TRIAGE">
+        <comment>急診檢傷分類(1/2/3/4)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="275" parent="17" name="MED_DAYS">
+        <comment>用藥天數</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="276" parent="17" name="MED_ORDER">
+        <comment>領藥號</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="277" parent="17" name="WHO_DISC">
+        <comment>折扣批准人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="278" parent="17" name="HOSPITALIZE_CLERK">
+        <comment>醫囑住院輸入人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="279" parent="17" name="HOSPITALIZE_DATETIME">
+        <comment>醫囑住院日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="280" parent="17" name="SERNO">
+        <comment>住院流水號</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="281" parent="17" name="BLOCKED_REASON">
+        <comment>帳款凍結(1.逾期 2.住院)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="282" parent="17" name="REG_CLERK">
+        <comment>掛號員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="283" parent="17" name="REG_DATETIME">
+        <comment>掛號日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="284" parent="17" name="OPD_CLERK">
+        <comment>批價人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="285" parent="17" name="OPD_DATETIME">
+        <comment>批價日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="286" parent="17" name="TREAT_CLERK">
+        <comment>診間處理人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="287" parent="17" name="TREAT_DATETIME">
+        <comment>診間處理日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="288" parent="17" name="REG_AMT">
+        <comment>應收掛號費</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="289" parent="17" name="DISC_REG_AMT">
+        <comment>掛號費折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="290" parent="17" name="CASE_TYPE">
+        <comment>申報案件(Default)&#xd;
+                                           原為 REAL_EMG</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="291" parent="17" name="CHRONIC_SEQ">
+        <comment>連續處方箋序號</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="292" parent="17" name="HE_DATE">
+        <comment>轉申報日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="293" parent="17" name="BEGIN_DUPLICATE">
+        <comment>療程首日重複號</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="294" parent="17" name="BEGIN_DATE">
+        <comment>療程首日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="295" parent="17" name="COURSE_TYPE">
+        <comment>療程種類</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="296" parent="17" name="COURSE_DEADLINE">
+        <comment>療程期限日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="297" parent="17" name="COURSE_RECENT_DATE">
+        <comment>最近治療日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="298" parent="17" name="COURSE_TOTAL_TIMES">
+        <comment>總治療次數</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="299" parent="17" name="COURSE_TIMES">
+        <comment>已治療次數</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="300" parent="17" name="DISCOUNT_RELATION">
+        <comment>人工折扣批准人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="301" parent="17" name="REG_STATUS">
+        <comment>1.路倒&#xd;
+                                            2.車禍昏迷&#xd;
+                                            3.非健保身份掛號&#xd;
+                                            7.出生嬰兒</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="302" parent="17" name="FORCE_TYPE">
+        <comment>1.家暴 2.性侵害</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="303" parent="17" name="CARD_TYPE">
+        <comment>卡別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="304" parent="17" name="IC_CARD_NO">
+        <comment>IC卡號</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="305" parent="17" name="CHILD_BIRTH_DATE">
+        <comment>新生兒出生日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="306" parent="17" name="CHILD_BORN_NOTE">
+        <comment>新生兒胞胎註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="307" parent="17" name="CLINIC_TYPE">
+        <comment>就醫類別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="308" parent="17" name="CLINIC_NEW_BORN_NOTE">
+        <comment>新生兒就醫註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="309" parent="17" name="CLINIC_DATE_TIME">
+        <comment>就診日期時間</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="310" parent="17" name="CLINIC_SUPPLE_NOTE">
+        <comment>補卡註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="311" parent="17" name="CLINIC_SEQ_NO">
+        <comment>就醫序號</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="312" parent="17" name="HEAL_NOTE">
+        <comment>保健服務項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="313" parent="17" name="HEAL_SERVICE_ITEM">
+        <comment>保健檢查項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="314" parent="17" name="PREGNANT_ITEM">
+        <comment>孕婦產檢項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="315" parent="17" name="SECURE_SIGN">
+        <comment>安全簽章</comment>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="316" parent="17" name="CARDSEQ_STATUS">
+        <comment>是否已取得就醫序號</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="317" parent="17" name="SAM_ID">
+        <comment>安全模組</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="318" parent="17" name="HOSP_ID">
+        <comment>醫院</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="319" parent="17" name="TRANSED">
+        <comment>轉檔否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="320" parent="17" name="CARD_ERROR_CODE">
+        <comment>寫卡失敗碼</comment>
+        <data-type>decimal(4)</data-type>
+      </column>
+      <column id="321" parent="17" name="TRANS_TYPE">
+        <comment>資料型態(1: 健保就醫/2: 預防接種)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="322" parent="17" name="TRANS_KIND">
+        <comment>資料格式(1:正常/2:異常/3:正常補正/4:異常補正)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="323" parent="17" name="DATA_CORRECT">
+        <comment>資料正確(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="324" parent="17" name="DRUGGIST_NO">
+        <comment>調劑藥師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="325" parent="17" name="CHECK_DRUGGIST_NO">
+        <comment>複核藥師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="326" parent="17" name="STOP_RECHECK_FEE">
+        <comment>不再重過基本費用(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="327" parent="17" name="OCCUP_DISEASE_FLAG">
+        <comment>是否職傷初診</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="328" parent="17" name="APPOINTMENT_MODE">
+        <comment>掛號方式(1/2.現掛 3/4.電話 5/6.診間 7/8.語音)  奇數:當診 , 偶數:非當診</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="329" parent="17" name="INCOME_CLERK">
+        <comment>其它收入批價員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="330" parent="17" name="INCOME_DATETIME">
+        <comment>其它收入最後異動時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="331" parent="17" name="MERGE_VIEW_DATE">
+        <comment>合併申報之看診日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="332" parent="17" name="MERGE_DUPLICATE_NO">
+        <comment>合併申報之序號</comment>
+        <data-type>decimal(2)</data-type>
+      </column>
+      <column id="333" parent="17" name="MERGE_REPORT_CLASS">
+        <comment>合併申報申報類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="334" parent="17" name="OPDACNT_COUNT">
+        <comment>醫令數量</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="335" parent="17" name="ADMITTANCE">
+        <comment>人工折扣核準人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="336" parent="17" name="EMG_ACCRUE">
+        <comment>急診加成</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="337" parent="17" name="CUT_HE_DATE">
+        <comment>切帳日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="338" parent="17" name="TRANS_IN_TYPE">
+        <comment>轉入類別(06轉入 07門診手術7日內回診 08出院患者7日內回診)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="339" parent="17" name="TRANS_OUT_TYPE">
+        <comment>轉出/需回診類別(DA轉出 DB門診手術7日內回診 DC出院患者7日內回診)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="340" parent="17" name="TRANS_OUT_HOSP">
+        <comment>轉出之醫事機構代號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="341" parent="17" name="DISABILITY_FLAG">
+        <comment>是否有殘障手冊</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="342" parent="17" name="COURSE_MERGE_STATUS">
+        <comment>是否已合併至下月同療首日</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="343" parent="17" name="SPEC_NO">
+        <comment>特定治療項目代碼</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="344" parent="17" name="NEED_CUT_CASE">
+        <comment>是否含有需切帳醫令</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="345" parent="17" name="UNDECLARED">
+        <comment>是否不申報</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="346" parent="17" name="PT_TYPE_1">
+        <comment>掛號身份</comment>
+        <data-type>decimal(2)</data-type>
+      </column>
+      <column id="347" parent="17" name="BABY_INJECT">
+        <comment>新生兒回診注射</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="348" parent="17" name="CHECK_IN_TYPE">
+        <comment>1:現場/2:電話</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="349" parent="17" name="SENDMSG_FLAG">
+        <comment>是否願意收到簡訊(願意:Y/不願意:其它值)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="350" parent="17" name="RESERVE_MSG_SENT">
+        <comment>預約簡訊已送</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="351" parent="17" name="NEED_TRACE_FLAG">
+        <comment>是否需衛教人員追蹤</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="352" parent="17" name="FRONT_CASE_TYPE">
+        <comment>前台案件(目前為未持職傷單但要申報職傷案件用)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="353" parent="17" name="HE_DISEASE_ANYS">
+        <comment>給付類別(參考JUSTNAME/HEDISEANYS)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="354" parent="17" name="UC_DIV">
+        <comment>健保科別(供整合式照護用)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="355" parent="17" name="IC_LIMIT_DATE">
+        <comment>IC到期日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="356" parent="17" name="BREAST_TRANS_FLAG">
+        <comment>是否做乳房追蹤</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="357" parent="17" name="TRANS_EMR_DATE">
+        <comment>轉EMR時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="358" parent="17" name="SIGN_EMR_DATE">
+        <comment>簽章時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="359" parent="17" name="HIS2EMR_COMPLETE_DATE">
+        <comment>申請轉EMR日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="360" parent="17" name="SPEC_SENSITIVE_LABEL">
+        <comment>EMR敏感性患者註記</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="361" parent="17" name="TRANS2EMR_COMPLETE_DATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="362" parent="17" name="EXCHANGE_SIGN_EMR_DATE">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="363" parent="17" name="SKIN_VALUES">
+        <comment>皮膚測試欄位 (  N:  陰性 P: 陽性   D: 拒作)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="364" parent="17" name="IS_OCCUPATIONAL">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <index id="365" parent="17" name="PATOPD_CHART_NO">
+        <columns>CHART_NO
+VIEW_DATE
+DUPLICATE_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="366" parent="17" name="PATOPD_CHART_SERNO">
+        <columns>CHART_NO
+SERNO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="367" parent="17" name="PATOPD_HIS2EMR">
+        <columns>HIS2EMR_COMPLETE_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="368" parent="17" name="PATOPD_REG_DATETIME">
+        <columns>REG_DATETIME</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="369" parent="17" name="PATOPD_REG_LIST">
+        <columns>VIEW_DATE
+ZONE
+APN
+CLINIC
+VIEW_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="370" parent="17" name="PATOPD_TRANS2EMR_COMPLETE">
+        <columns>TRANS2EMR_COMPLETE_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="371" parent="17" name="PATOPD_TREAT_DATETIME">
+        <columns>TREAT_DATETIME
+TREAT_CLERK</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="372" parent="17" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="373" parent="18" name="AREA_CODE">
+        <comment>區域代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="374" parent="18" name="MAIN_NAME">
+        <comment>主區域名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="375" parent="18" name="ZIP_CODE">
+        <comment>郵遞區號</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="376" parent="18" name="TEL_CODE">
+        <comment>電話區域號碼</comment>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="377" parent="18" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="378" parent="18" name="KEYIN_CLERK">
+        <comment>輸入員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="379" parent="18" name="HEAF_CODE">
+        <comment>預防保健轉檔參考的縣市代碼</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="380" parent="18" name="OLD_MAIN_NAME">
+        <comment>主區域名稱</comment>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <key id="381" parent="18" name="PRIMARY">
+        <columns>AREA_CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="382" parent="19" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="383" parent="19" name="BILL_NO">
+        <comment>帳單號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="384" parent="19" name="CATEGORIES">
+        <comment>類別(1醫療收入2健保應收3暫收款)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="385" parent="19" name="ACNT_NO">
+        <comment>費用帳號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="386" parent="19" name="AMT">
+        <comment>應收金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="387" parent="19" name="ACNT_DISCOUNT">
+        <comment>醫令人工折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="388" parent="19" name="DISCOUNT">
+        <comment>人工折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="389" parent="19" name="COMP_DISCOUNT">
+        <comment>電腦折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="390" parent="19" name="PAID">
+        <comment>實收金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <index id="391" parent="19" name="BILAMT_BILL_NO">
+        <columns>BILL_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="392" parent="19" name="PRIMARY">
+        <columns>CHART_NO
+BILL_NO
+CATEGORIES
+ACNT_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="393" parent="20" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="394" parent="20" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="395" parent="20" name="BILL_NO">
+        <comment>帳單號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="396" parent="20" name="CATEGORIES">
+        <comment>類別(1醫療收入2健保應收3暫收款)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="397" parent="20" name="INP_OPD">
+        <comment>門診/住院</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="398" parent="20" name="BILL_DATE">
+        <comment>帳單日期(門診日期/住院開帳單日期)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="399" parent="20" name="SERNO">
+        <comment>門診重複號/住院流水號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="400" parent="20" name="PT_TYPE">
+        <comment>身份</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="401" parent="20" name="DISCOUNT_PTR">
+        <comment>折扣指標</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="402" parent="20" name="TOT_AMT">
+        <comment>帳單總金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="403" parent="20" name="ACNT_DISCOUNT">
+        <comment>醫令帳款人工折扣合計</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="404" parent="20" name="DISCOUNT">
+        <comment>人工折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="405" parent="20" name="COMP_DISCOUNT">
+        <comment>電腦折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="406" parent="20" name="DOUBT">
+        <comment>呆帳金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="407" parent="20" name="OVERPAY">
+        <comment>溢收金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="408" parent="20" name="PAID">
+        <comment>已付款</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="409" parent="20" name="PAY_UP_DATE">
+        <comment>結清日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="410" parent="20" name="RETURN_DATE">
+        <comment>退款日期時間(暫收款)</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="411" parent="20" name="COMEFROM_NO">
+        <comment>病患來源</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="412" parent="20" name="PART_NO">
+        <comment>部份負擔代碼</comment>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="413" parent="20" name="PART_AMT">
+        <comment>部份負擔金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="414" parent="20" name="INFECTION_FLAG">
+        <comment>是否法定傳染病患者</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="415" parent="20" name="CHRONIC_FLAG">
+        <comment>慢性病(Y:慢/N:急)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="416" parent="20" name="FORCE_TYPE">
+        <comment>1.家暴 2.性侵害</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="417" parent="20" name="DIV_NO">
+        <comment>科別</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="418" parent="20" name="DOCTOR_NO">
+        <comment>門診醫師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <index id="419" parent="20" name="BILL_BILL_NO">
+        <columns>BILL_NO
+CATEGORIES</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="420" parent="20" name="BILL_CATEGORIES_BILL_DATE">
+        <columns>CATEGORIES
+BILL_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="421" parent="20" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="422" parent="21" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="423" parent="21" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="424" parent="21" name="DUPLICATE_NO">
+        <comment>重覆序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="425" parent="21" name="COMPLAINT">
+        <comment>主訴</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="426" parent="21" name="DIAGNOSIS">
+        <comment>診斷</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="427" parent="21" name="TEMPERATURE">
+        <comment>體溫</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="428" parent="21" name="SYSTOLIC_PRESSURE">
+        <comment>收縮壓</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="429" parent="21" name="DIASTOLIC_PRESSURE">
+        <comment>舒張壓</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="430" parent="21" name="HEIGHT">
+        <comment>身高</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="431" parent="21" name="WEIGHT">
+        <comment>體重</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="432" parent="21" name="PULSE">
+        <comment>脈搏</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="433" parent="21" name="BLOOD_SUGAR">
+        <comment>血糖</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="434" parent="21" name="PRINT_DATETIME">
+        <comment>貼病歷單列印日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="435" parent="21" name="CREATE_DATETIME">
+        <comment>建立日期時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="436" parent="21" name="CREATE_CLERK">
+        <comment>建立人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="437" parent="21" name="MODIFY_DATETIME">
+        <comment>修改日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="438" parent="21" name="MODIFY_CLERK">
+        <comment>修改人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="439" parent="21" name="PLAN">
+        <data-type>text</data-type>
+      </column>
+      <column id="440" parent="21" name="DIAGNOSIS1">
+        <data-type>text</data-type>
+      </column>
+      <column id="441" parent="21" name="SONA">
+        <comment>婦科超音波診斷</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="442" parent="21" name="SONA_SEQ_NO">
+        <comment>婦科超音波報告序號</comment>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="443" parent="21" name="SONA1">
+        <comment>乳房超音波診斷</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="444" parent="21" name="SONA_SEQ_NO1">
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="445" parent="21" name="CHILDBIRTH_DATE">
+        <comment>預產期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="446" parent="21" name="P_TIMES">
+        <comment>胎次</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="447" parent="21" name="AP_CHILDPOS">
+        <comment>胎位</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="448" parent="21" name="AP_GS">
+        <comment>產檢超音波GS</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="449" parent="21" name="AP_CRL">
+        <comment>產檢超音波CRL</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="450" parent="21" name="AP_BPD">
+        <comment>產檢超音波BPD</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="451" parent="21" name="AP_AC">
+        <comment>產檢超音波AC</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="452" parent="21" name="AP_FL">
+        <comment>產檢超音波FL</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="453" parent="21" name="AP_EBW">
+        <comment>產檢超音波EBW</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="454" parent="21" name="AP_AFI">
+        <comment>產檢超音波FAI</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="455" parent="21" name="AP_GS2">
+        <comment>產檢超音波GS2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="456" parent="21" name="AP_CRL2">
+        <comment>產檢超音波CRL2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="457" parent="21" name="AP_BPD2">
+        <comment>產檢超音波BPD2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="458" parent="21" name="AP_AC2">
+        <comment>產檢超音波AC2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="459" parent="21" name="AP_FL2">
+        <comment>產檢超音波FL2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="460" parent="21" name="AP_EBW2">
+        <comment>產檢超音波EBW2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="461" parent="21" name="AP_AFI2">
+        <comment>產檢超音波FAI2</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="462" parent="21" name="AP_GS3">
+        <comment>產檢超音波GS3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="463" parent="21" name="AP_CRL3">
+        <comment>產檢超音波CRL3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="464" parent="21" name="AP_BPD3">
+        <comment>產檢超音波BPD3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="465" parent="21" name="AP_AC3">
+        <comment>產檢超音波AC3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="466" parent="21" name="AP_FL3">
+        <comment>產檢超音波FL3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="467" parent="21" name="AP_EBW3">
+        <comment>產檢超音波EBW3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="468" parent="21" name="AP_AFI3">
+        <comment>產檢超音波FAI3</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="469" parent="21" name="IS_CS_HIS">
+        <comment>過去從未接受過剖腹產Y/N</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <index id="470" parent="21" name="CHART1_CHART_DATE">
+        <columns>CHART_NO
+VIEW_DATE
+DUPLICATE_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="471" parent="21" name="PRIMARY">
+        <columns>VIEW_DATE
+CHART_NO
+DUPLICATE_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="472" parent="22" name="WEEK">
+        <comment>週別</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="473" parent="22" name="APN">
+        <comment>時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="474" parent="22" name="ZONE">
+        <comment>院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="475" parent="22" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="476" parent="22" name="EFF_DATE">
+        <comment>生效日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="477" parent="22" name="EFF_TIME">
+        <comment>生效時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="478" parent="22" name="ACTION">
+        <comment>處理動作</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="479" parent="22" name="DIV_NO">
+        <comment>科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="480" parent="22" name="DOCTOR_NO">
+        <comment>醫師代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="481" parent="22" name="CASH_TYPE">
+        <comment>收費別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="482" parent="22" name="NO_TYPE">
+        <comment>編號方式</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="483" parent="22" name="SEND_CHART">
+        <comment>送病歷否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="484" parent="22" name="LIMIT">
+        <comment>人數限制</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="485" parent="22" name="APPOINT">
+        <comment>預約期限</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="486" parent="22" name="SINGLE_VIEW_MIN">
+        <comment>每患者看診分鐘數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="487" parent="22" name="PAUSE">
+        <comment>停診</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="488" parent="22" name="PAUSE_REASON">
+        <comment>停診原因</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="489" parent="22" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="490" parent="22" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="491" parent="22" name="APPOINT_TEL">
+        <comment>允許語音掛號(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="492" parent="22" name="START_VIEW_TIME">
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="493" parent="22" name="FV_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="494" parent="22" name="RV_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="495" parent="22" name="FV_VISIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="496" parent="22" name="RV_VISIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="497" parent="22" name="RESERVE_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="498" parent="22" name="STOP_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="499" parent="22" name="PRIMARY">
+        <columns>WEEK
+APN
+ZONE
+CLINIC
+EFF_DATE
+EFF_TIME</columns>
+        <primary>1</primary>
+      </key>
+      <column id="500" parent="23" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="501" parent="23" name="APN">
+        <comment>時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="502" parent="23" name="DOCTOR_NO">
+        <comment>醫師代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="503" parent="23" name="ZONE">
+        <comment>院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="504" parent="23" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="505" parent="23" name="DIV_NO">
+        <comment>科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="506" parent="23" name="CASH_TYPE">
+        <comment>收費別:1一般E急作</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="507" parent="23" name="SEND_CHART">
+        <comment>是否送病歷(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="508" parent="23" name="LIMIT">
+        <comment>人數限制:0無</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="509" parent="23" name="NO_TYPE">
+        <comment>編號方式:1一般</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="510" parent="23" name="PAUSE">
+        <comment>停診否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="511" parent="23" name="PAUSE_REASON">
+        <comment>停診原因</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="512" parent="23" name="APPOINT">
+        <comment>預約期限</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="513" parent="23" name="SINGLE_VIEW_MIN">
+        <comment>每患者看診時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="514" parent="23" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="515" parent="23" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="516" parent="23" name="APPOINT_TEL">
+        <comment>允許語音掛號(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="517" parent="23" name="START_VIEW_TIME">
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="518" parent="23" name="FV_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="519" parent="23" name="RV_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="520" parent="23" name="FV_VISIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="521" parent="23" name="RV_VISIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="522" parent="23" name="RESERVE_LIMIT">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="523" parent="23" name="STOP_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="524" parent="23" name="END_VIEW_DATETIME">
+        <data-type>datetime</data-type>
+      </column>
+      <index id="525" parent="23" name="INDEX_WEBREG_KEY1">
+        <columns>ZONE
+VIEW_DATE
+PAUSE
+APPOINT_TEL</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="526" parent="23" name="INDEX_WEBREG_KEY2">
+        <columns>ZONE
+VIEW_DATE
+APN
+CLINIC</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="527" parent="23" name="PRIMARY">
+        <columns>VIEW_DATE
+APN
+DOCTOR_NO
+ZONE
+CLINIC</columns>
+        <primary>1</primary>
+      </key>
+      <column id="528" parent="24" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="529" parent="24" name="APN">
+        <comment>時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="530" parent="24" name="ZONE">
+        <comment>院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="531" parent="24" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="532" parent="24" name="VIEW_NO">
+        <comment>給號狀況</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="533" parent="24" name="PRIMARY">
+        <columns>VIEW_DATE
+APN
+ZONE
+CLINIC</columns>
+        <primary>1</primary>
+      </key>
+      <column id="534" parent="25" name="DOCTOR_NO">
+        <comment>醫師代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="535" parent="25" name="CONTEXT">
+        <comment>內容</comment>
+        <data-type>text</data-type>
+      </column>
+      <key id="536" parent="25" name="PRIMARY">
+        <columns>DOCTOR_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="537" parent="26" name="DOCTOR_NO">
+        <comment>看診醫師</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="538" parent="26" name="EFF_DATE">
+        <comment>生效日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="539" parent="26" name="HE_DOCTOR_NO">
+        <comment>申報醫師</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="540" parent="26" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="541" parent="26" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="542" parent="26" name="OUT_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <key id="543" parent="26" name="PRIMARY">
+        <columns>DOCTOR_NO
+EFF_DATE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="544" parent="27" name="EMP_NO">
+        <comment>員工編號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="545" parent="27" name="EMP_NAME">
+        <comment>員工姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="546" parent="27" name="ID_NO">
+        <comment>身份證號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="547" parent="27" name="IN_DATE">
+        <comment>到職日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="548" parent="27" name="OUT_DATE">
+        <comment>離職日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="549" parent="27" name="CURRENT_STOCK">
+        <comment>目前登入庫別</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="550" parent="27" name="SYSTEM_NO">
+        <comment>主要使用系統</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="551" parent="27" name="DEPT_NO">
+        <comment>所屬部門</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="552" parent="27" name="PASSWD">
+        <comment>密碼</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="553" parent="27" name="SOURCE">
+        <comment>醫師來源 (1,專任 2.支援 3.兼差 4.專任未核備)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="554" parent="27" name="DEGREE">
+        <comment>醫師等級</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="555" parent="27" name="ORDERMYSELF">
+        <comment>醫師自行入醫令</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="556" parent="27" name="TREAT_TITLE">
+        <comment>醫務職稱 ref vtreattitle</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="557" parent="27" name="REMARK">
+        <comment>備註</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="558" parent="27" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="559" parent="27" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="560" parent="27" name="TEL_DOCTOR_NO">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="561" parent="27" name="DOCTOR_PHONE">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="562" parent="27" name="DEFAULT_TRANS_EMR_FLAG">
+        <comment>員工個人是否轉EMR</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="563" parent="27" name="DEFAULT_SIGN_EMR_FLAG">
+        <comment>D:為讀取emrformname的設定</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="564" parent="27" name="DEFAULT_IMMEDIATE_SIGN_FLAG">
+        <comment>D:為讀取emrformname的設定</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="565" parent="27" name="HCA_PIN">
+        <comment>醫師HCA卡PIN碼</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="566" parent="27" name="PRIMARY">
+        <columns>EMP_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="567" parent="28" name="CATEGORIES">
+        <comment>類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="568" parent="28" name="NO">
+        <comment>序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="569" parent="28" name="NAME">
+        <comment>名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="570" parent="28" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="571" parent="28" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="572" parent="28" name="BILL_CATEGORIES">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="573" parent="28" name="ACNT_FLAG">
+        <comment>代收款</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="574" parent="28" name="PRIMARY">
+        <columns>CATEGORIES
+NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="575" parent="29" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="576" parent="29" name="ZONE">
+        <comment>院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="577" parent="29" name="APN">
+        <comment>時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="578" parent="29" name="CLINIC">
+        <comment>診號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="579" parent="29" name="VIEW_NO">
+        <comment>看診號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="580" parent="29" name="DOCTOR_NO">
+        <comment>看診醫師</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="581" parent="29" name="CONTENT">
+        <comment>內容(病歷號/電話/身份證)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="582" parent="29" name="KEY">
+        <comment>初診預留值</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="583" parent="29" name="CLERK">
+        <comment>掛號員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="584" parent="29" name="REG_TIME">
+        <comment>掛號時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="585" parent="29" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="586" parent="29" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="587" parent="29" name="ID_NO">
+        <comment>身分證號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="588" parent="29" name="TEL">
+        <comment>電話</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <key id="589" parent="29" name="PRIMARY">
+        <columns>VIEW_DATE
+ZONE
+APN
+CLINIC
+VIEW_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="590" parent="30" name="HOSP_NO">
+        <comment>醫事機構代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="591" parent="30" name="HOSP_NAME">
+        <comment>醫事機構名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="592" parent="30" name="HOSP_CLASS">
+        <comment>醫事機構層級</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="593" parent="30" name="HOSP_BOSS">
+        <comment>醫事機構負責人</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="594" parent="30" name="HOSP_ADDRESS">
+        <comment>醫事機構地址</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="595" parent="30" name="HOSP_TEL">
+        <comment>醫事機構電話</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="596" parent="30" name="HOSP_FAX">
+        <comment>醫事機構傳真</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="597" parent="30" name="HOSP_LICENCE">
+        <comment>醫事機構開業執照</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="598" parent="30" name="HOSP_SUPERINTENDENT">
+        <comment>醫事機構院長</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="599" parent="30" name="KEYIN_DATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="600" parent="30" name="KEYIN_CLERK">
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="601" parent="30" name="PRIMARY">
+        <columns>HOSP_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="602" parent="31" name="PAY_NO">
+        <comment>收費號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="603" parent="31" name="ACNT_NO">
+        <comment>費用帳號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="604" parent="31" name="AMT">
+        <comment>應收金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="605" parent="31" name="COMP_DISCOUNT">
+        <comment>電腦折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="606" parent="31" name="DISCOUNT">
+        <comment>人工折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="607" parent="31" name="PAID">
+        <comment>實收金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="608" parent="31" name="PRIMARY">
+        <columns>PAY_NO
+ACNT_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="609" parent="32" name="PAY_NO">
+        <comment>收費號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="610" parent="32" name="PAY_DATE">
+        <comment>收費日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="611" parent="32" name="PT_TYPE">
+        <comment>身份</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="612" parent="32" name="CASHIER">
+        <comment>收費員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="613" parent="32" name="COMEFROM_NO">
+        <comment>記帳單位</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="614" parent="32" name="INP_OPD">
+        <comment>門診/住院</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="615" parent="32" name="OPD_DATE">
+        <comment>門診日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="616" parent="32" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="617" parent="32" name="SERNO">
+        <comment>序號</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="618" parent="32" name="DIV_NO">
+        <comment>科別</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="619" parent="32" name="DOCTOR_NO">
+        <comment>醫師代碼</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="620" parent="32" name="DISCOUNT_PTR">
+        <comment>折扣指標</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="621" parent="32" name="TOT_AMT">
+        <comment>總金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="622" parent="32" name="AR">
+        <comment>應收款</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="623" parent="32" name="SUPPLE_AMT">
+        <comment>欠單金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="624" parent="32" name="DISCOUNT">
+        <comment>折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="625" parent="32" name="COMP_DISCOUNT">
+        <comment>電腦折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="626" parent="32" name="BILL_DOUBT">
+        <comment>呆帳</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="627" parent="32" name="OVERPAY">
+        <comment>溢收</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="628" parent="32" name="PAID">
+        <comment>付款</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="629" parent="32" name="PAID_FLAG">
+        <comment>款別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="630" parent="32" name="PAID_TYPE">
+        <comment>付款方式(付現/刷卡/記帳)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="631" parent="32" name="RECEIPT_NO">
+        <comment>收據號碼</comment>
+        <data-type>decimal(9)</data-type>
+      </column>
+      <column id="632" parent="32" name="SCRAP_DATE">
+        <comment>作廢日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="633" parent="32" name="SCRAP_CLERK">
+        <comment>作廢人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="634" parent="32" name="RETURN_DATE">
+        <comment>退費日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="635" parent="32" name="BILL_NO">
+        <comment>帳單號碼</comment>
+        <data-type>decimal(9)</data-type>
+      </column>
+      <column id="636" parent="32" name="BILLODDS_NO">
+        <comment>帳單異動號碼</comment>
+        <data-type>decimal(9)</data-type>
+      </column>
+      <column id="637" parent="32" name="RETURN_CLERK">
+        <comment>退費人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="638" parent="32" name="DISCOUNT_RELATION">
+        <comment>人工折扣批准人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="639" parent="32" name="DEPOSIT_TYPE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="640" parent="32" name="SUPPLE_TO_DEPOSIT">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="641" parent="32" name="MARK_FLAG">
+        <comment>註記修改否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <index id="642" parent="32" name="PAYMENT_BILLODDS_NO">
+        <columns>BILLODDS_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="643" parent="32" name="PAYMENT_BILL_NO">
+        <columns>BILL_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="644" parent="32" name="PAYMENT_CASHIER">
+        <columns>CASHIER</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="645" parent="32" name="PAYMENT_CHART_NO">
+        <columns>CHART_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="646" parent="32" name="PAYMENT_COMEFROM_NO">
+        <columns>COMEFROM_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="647" parent="32" name="PAYMENT_DIV_NO">
+        <columns>DIV_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="648" parent="32" name="PAYMENT_DOCTOR_NO">
+        <columns>DOCTOR_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="649" parent="32" name="PAYMENT_PT_TYPE">
+        <columns>PT_TYPE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="650" parent="32" name="PAYMENT_RECEIPT_NO">
+        <columns>RECEIPT_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="651" parent="32" name="PRIMARY">
+        <columns>PAY_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="652" parent="33" name="PTR">
+        <comment>連帶指標</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="653" parent="33" name="REC_COUNT">
+        <comment>序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="654" parent="33" name="CODE">
+        <comment>批價代號</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="655" parent="33" name="QTY">
+        <comment>單一劑量</comment>
+        <data-type>decimal(6,2)</data-type>
+      </column>
+      <column id="656" parent="33" name="SELF_PAID_FLAG">
+        <comment>付費否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="657" parent="33" name="HE_PAID_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="658" parent="33" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="659" parent="33" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <key id="660" parent="33" name="PRIMARY">
+        <columns>PTR
+REC_COUNT</columns>
+        <primary>1</primary>
+      </key>
+      <column id="661" parent="34" name="CODE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="662" parent="34" name="EFF_DATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="663" parent="34" name="FULL_NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="664" parent="34" name="UNIT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="665" parent="34" name="HE_CODE">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="666" parent="34" name="PAID_FLAG">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="667" parent="34" name="ADD_RATE">
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="668" parent="34" name="PRICE">
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="669" parent="34" name="AUTO_FLAG">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="670" parent="34" name="PTR">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="671" parent="34" name="INP_PTR">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="672" parent="34" name="HE_PAID_FLAG">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="673" parent="34" name="HE_ADD_RATE">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="674" parent="34" name="HE_PRICE">
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="675" parent="34" name="HE_AUTO_FLAG">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="676" parent="34" name="HE_PTR">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="677" parent="34" name="HE_INP_PTR">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="678" parent="34" name="HE_ADD_FEE">
+        <mandatory>1</mandatory>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="679" parent="34" name="CREATE_CLERK">
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="680" parent="34" name="CREATE_DATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="681" parent="34" name="MODIFY_CLERK">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="682" parent="34" name="MODIFY_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="683" parent="34" name="EMG">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="684" parent="34" name="KID_ADD">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="685" parent="34" name="HE_EMG">
+        <comment>急診加成否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="686" parent="34" name="HE_KID_ADD">
+        <comment>兒童加成否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="687" parent="34" name="KID_ADD_60">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="688" parent="34" name="HE_KID_ADD_60">
+        <comment>六個月兒童加成否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="689" parent="34" name="HE_GIVE_TYPE">
+        <comment>醫令調劑類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="690" parent="34" name="CASE_TYPE">
+        <comment>醫令歸類案件別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="691" parent="34" name="HE_CARIOSITY">
+        <comment>四歲以下齲齒防治加成(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="692" parent="34" name="EMG_PTR">
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="693" parent="34" name="HE_EMG_PTR">
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="694" parent="34" name="CASE_TYPE_INP">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="695" parent="34" name="IS_CLIN_BOT">
+        <comment>是否為原瓶用藥</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="696" parent="34" name="ATTEND_CODE">
+        <comment>診察費代碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="697" parent="34" name="C_APP_HE_ADD_RATE">
+        <comment>是否為基層院所額外加成醫令</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="698" parent="34" name="SEND_HOSPID">
+        <comment>委託其他醫事機構代號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="699" parent="34" name="HE_KID_ADD_EX">
+        <comment>提升兒童加成否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="700" parent="34" name="KID_ADD_EX">
+        <comment>提升兒童加成否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <index id="701" parent="34" name="PRICEHE_HE_CODE">
+        <columns>HE_CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="702" parent="34" name="PRIMARY">
+        <columns>CODE
+EFF_DATE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="703" parent="35" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="704" parent="35" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="705" parent="35" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="706" parent="35" name="DUPLICATE_NO">
+        <comment>重覆序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="707" parent="35" name="APN">
+        <comment>時段</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="708" parent="35" name="CLINIC">
+        <comment>診間</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="709" parent="35" name="DOCTOR_NO">
+        <comment>醫師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="710" parent="35" name="VIEW_NO">
+        <comment>看診號碼</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="711" parent="35" name="REG_CLERK">
+        <comment>掛號人員</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="712" parent="35" name="REG_TIME">
+        <comment>掛號時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="713" parent="35" name="PRENATAL_CARE">
+        <comment>產檢(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="714" parent="35" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="715" parent="36" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="716" parent="36" name="PT_NAME">
+        <comment>姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="717" parent="36" name="ID_NO">
+        <comment>身份證號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="718" parent="36" name="ID_NO_OK">
+        <comment>身份證驗證</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="719" parent="36" name="PHOTOCOPY">
+        <comment>身份證影印</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="720" parent="36" name="BIRTH_DATE">
+        <comment>生日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="721" parent="36" name="FIRST_VIEW_DATE">
+        <comment>初診日期&#xd;
+                                                若未給病歷號不可有初診日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="722" parent="36" name="LAST_VIEW_DATE">
+        <comment>複診日期&#xd;
+                                               若未給病歷號不可有初診日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="723" parent="36" name="CREATE_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="724" parent="36" name="CREATE_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="725" parent="36" name="MODIFY_DATE">
+        <comment>修改日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="726" parent="36" name="MODIFY_CLERK">
+        <comment>修改人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="727" parent="36" name="SEX">
+        <comment>姓別</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="728" parent="36" name="PT_TYPE">
+        <comment>身份</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="729" parent="36" name="LOCATION">
+        <comment>病歷位置</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="730" parent="36" name="LAST_XRAY_DATE">
+        <comment>最近放射檢查日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="731" parent="36" name="LAST_EXAM_DATE">
+        <comment>最近檢驗日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="732" parent="36" name="MED_PACK">
+        <comment>藥品分包(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="733" parent="36" name="FOREIGN">
+        <comment>外籍人士(國籍證件別)&#xd;
+                                        1.身份證 2.居留證 3.護照 4.旅行證</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="734" parent="36" name="MERGE_TO">
+        <comment>病歷合併至</comment>
+        <data-type>decimal(7)</data-type>
+      </column>
+      <column id="735" parent="36" name="EMP_NO">
+        <comment>關係人員工代號</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="736" parent="36" name="WHO_DISC">
+        <comment>關係人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="737" parent="36" name="INP_DISCOUNT_PTR">
+        <comment>住院折扣</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="738" parent="36" name="OPD_DISCOUNT_PTR">
+        <comment>門診折扣</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="739" parent="36" name="DIED_TRANS_CLERK">
+        <comment>移轉經辦員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="740" parent="36" name="DIED_TRANS_DATE">
+        <comment>移轉日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="741" parent="36" name="DIED_CERT_NO">
+        <comment>死亡證明號碼</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="742" parent="36" name="DIED_REASON">
+        <comment>死亡原因</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="743" parent="36" name="DIED_DATE">
+        <comment>死亡日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="744" parent="36" name="VS_WHEN_DIED">
+        <comment>主治醫師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="745" parent="36" name="COMEFROM_NO">
+        <comment>病患來源</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="746" parent="36" name="LOCKING_CLERK">
+        <comment>正由某人維護中</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="747" parent="36" name="LOCKING_DATETIME">
+        <comment>維護日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="748" parent="36" name="DIED_TIME">
+        <comment>死亡時間</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="749" parent="36" name="BLOOD">
+        <comment>血型</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="750" parent="36" name="NEWBORN_ID_NO">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="751" parent="36" name="NEWBORN_BIRTH_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="752" parent="36" name="NEWBORN_NOTE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="753" parent="36" name="FIRST_HR_DATE">
+        <comment>第一次洗腎日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="754" parent="36" name="GRIND">
+        <comment>是否磨粉(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="755" parent="36" name="SPEC_NO">
+        <comment>特定治療項目代碼</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="756" parent="36" name="REMARK">
+        <data-type>text</data-type>
+      </column>
+      <column id="757" parent="36" name="CHILDBIRTH_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="758" parent="36" name="IC_CARD_NO">
+        <comment>預產期</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="759" parent="36" name="G_TIMES">
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="760" parent="36" name="P_TIMES">
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="761" parent="36" name="SENDMSG_ALL_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="762" parent="36" name="LAST_SENDMSG_DATE">
+        <comment>是否&quot;一直&quot;願意收到簡訊(願意:Y/不願意:其它值)</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="763" parent="36" name="INJ_SENDMSG_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="764" parent="36" name="BREAT_SENDMSG_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="765" parent="36" name="SENSITIVE_LABEL">
+        <comment>特殊患者註記</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="766" parent="36" name="LMP_DATE">
+        <comment>特殊患者註記</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="767" parent="36" name="ABORIGINE">
+        <comment>是否為原住民(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="768" parent="36" name="PRIVACY_FLAG">
+        <comment>個資</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="769" parent="36" name="DNR_FLAG">
+        <comment>器官捐贈註記/安寧緩和醫療/心肺復甦術。</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="770" parent="36" name="DNR_SIGN">
+        <comment>於本院簽署同意不實施心肺復甦術</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="771" parent="36" name="RAISEORG_FLAG">
+        <comment>養護機構院民註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="772" parent="36" name="IS_CS_HIS">
+        <comment>過去從未接受過剖腹產Y/N</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <key id="773" parent="36" name="PRIMARY">
+        <columns>CHART_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="774" parent="37" name="ZONE">
+        <comment>院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="775" parent="37" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="776" parent="37" name="LOCATION">
+        <comment>位置</comment>
+        <data-type>varchar(14)</data-type>
+      </column>
+      <column id="777" parent="37" name="FLOOR">
+        <comment>樓別</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="778" parent="37" name="CATEGORIES">
+        <comment>類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="779" parent="37" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="780" parent="37" name="KEYIN_CLERK">
+        <comment>輸入員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="781" parent="37" name="PRIMARY">
+        <columns>ZONE
+CLINIC</columns>
+        <primary>1</primary>
+      </key>
+      <column id="782" parent="38" name="CODE">
+        <comment>疾病代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="783" parent="38" name="TITLE1">
+        <comment>英文名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(210)</data-type>
+      </column>
+      <column id="784" parent="38" name="TITLE2">
+        <comment>中文名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(210)</data-type>
+      </column>
+      <column id="785" parent="38" name="SEX_TYPE">
+        <comment>性別</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="786" parent="38" name="HE_CODE">
+        <comment>申報碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="787" parent="38" name="DIV_KIND">
+        <comment>科別分類</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="788" parent="38" name="MAJOR_CARE">
+        <comment>特定治療項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="789" parent="38" name="COMPLAINT">
+        <comment>症狀</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="790" parent="38" name="CAUSE">
+        <comment>病因</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="791" parent="38" name="ADVICE">
+        <comment>治療</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="792" parent="38" name="DISEASE_TYPE">
+        <comment>疾病類別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="793" parent="38" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="794" parent="38" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="795" parent="38" name="START_AGE">
+        <comment>起始年齡</comment>
+        <data-type>decimal(3)</data-type>
+      </column>
+      <column id="796" parent="38" name="END_AGE">
+        <comment>結束年齡</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="797" parent="38" name="CONFINED_DAYS">
+        <comment>週產期天數</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="798" parent="38" name="IMPORTANCE_FLAG">
+        <comment>是否重大疾病</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="799" parent="38" name="CHRONIC_FLAG">
+        <comment>是否慢性病</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="800" parent="38" name="NOT_MAIN">
+        <comment>可否為主診斷</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="801" parent="38" name="CHRONIC_CATEGORIES">
+        <comment>慢性病類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="802" parent="38" name="STANDARD_DAY">
+        <comment>標準天數</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="803" parent="38" name="CARE_LEVEL">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="804" parent="38" name="E1_SPEC_NO">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="805" parent="38" name="OCCUPATION_FLAG">
+        <comment>是否為職災疾病碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="806" parent="38" name="CLINIC_NOTE">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="807" parent="38" name="CONGENITAL">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="808" parent="38" name="CKD_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="809" parent="38" name="PRIMARY">
+        <columns>CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="810" parent="39" name="DIV_NO">
+        <comment>科別代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="811" parent="39" name="DIV_NAME">
+        <comment>科別名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="812" parent="39" name="OPDHE_DIV">
+        <comment>健保門診科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="813" parent="39" name="INPHE_DIV">
+        <comment>健保住院科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="814" parent="39" name="PRECEDE_DIV_NO">
+        <comment>上層科別代號</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="815" parent="39" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="816" parent="39" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="817" parent="39" name="EMG">
+        <comment>急診科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="818" parent="39" name="TEL_DIV_NO">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="819" parent="39" name="STOP_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="820" parent="39" name="INP_OPD">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="821" parent="39" name="BHP_DIV">
+        <comment>國健局科別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <key id="822" parent="39" name="PRIMARY">
+        <columns>DIV_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="823" parent="40" name="HOSP_NO">
+        <comment>醫院代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="824" parent="40" name="HOSP_NAME">
+        <comment>醫院名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="825" parent="40" name="ADDRESS">
+        <comment>地址</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="826" parent="40" name="TEL">
+        <comment>電話</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="827" parent="40" name="CLASS">
+        <comment>級別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="828" parent="40" name="COMMON">
+        <comment>通常使用</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="829" parent="40" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="830" parent="40" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="831" parent="40" name="HOSP_NAME_F">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="832" parent="40" name="FAX">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="833" parent="40" name="HOSP_NET">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="834" parent="40" name="E_MAIL">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="835" parent="40" name="PRINCIPAL">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="836" parent="40" name="NHI_HOSP_NO">
+        <comment>衛生署編定之醫事機構代號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <key id="837" parent="40" name="PRIMARY">
+        <columns>HOSP_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="838" parent="41" name="CODE">
+        <comment>批價</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="839" parent="41" name="PRICE_TYPE">
+        <comment>1藥品2處置3材料</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="840" parent="41" name="FULL_NAME">
+        <comment>學名/品名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="841" parent="41" name="FULL_NAME_C">
+        <comment>中文名/商品名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="842" parent="41" name="UNIT">
+        <comment>單位</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="843" parent="41" name="ACNT_NO">
+        <comment>帳號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="844" parent="41" name="MEDICINE_CODE">
+        <comment>藥典代號</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="845" parent="41" name="OP_ICD">
+        <comment>手術ICD</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="846" parent="41" name="CREATE_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="847" parent="41" name="CREATE_CLERK">
+        <comment>輸入員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="848" parent="41" name="MODIFY_DATE">
+        <comment>修改日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="849" parent="41" name="MODIFY_CLERK">
+        <comment>修改人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="850" parent="41" name="MAJOR_CARE">
+        <comment>特定治療</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="851" parent="41" name="UNIT_TQTY">
+        <comment>換算比率</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="852" parent="41" name="KIND_NO">
+        <comment>藥品屬性&#xd;
+參考Table INVKIND</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="853" parent="41" name="S_UNIT">
+        <comment>單位(較小)</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="854" parent="41" name="REQ_FORM">
+        <comment>所屬申請單據</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="855" parent="41" name="STOP_DATE">
+        <comment>停用日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="856" parent="41" name="STOP_REASON">
+        <comment>停藥原因(換廠商/缺藥/停藥)</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="857" parent="41" name="REPLACE_CODE">
+        <comment>停用後可替代醫令</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="858" parent="41" name="ADMIT_LIMIT_TQTY">
+        <comment>單次住院總量限制</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="859" parent="41" name="LIMIT_TQTY">
+        <comment>單筆醫令總量限制</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="860" parent="41" name="MODIFY_AMT">
+        <comment>是否可修改金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="861" parent="41" name="RPT24HOURS">
+        <comment>24小時需申報醫令</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="862" parent="41" name="DOCTOR_ORDER">
+        <comment>醫囑項目(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="863" parent="41" name="PROJECT_FLAG">
+        <comment>須事前審查</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="864" parent="41" name="LICENCE_FLAG">
+        <comment>開立需執照(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="865" parent="41" name="PRINTABLE">
+        <comment>是否列在病歷上</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="866" parent="41" name="SEND_LAB">
+        <comment>是否外送檢體(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="867" parent="41" name="LAB_DISC">
+        <comment>是否可檢驗折扣(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="868" parent="41" name="NEED_EXECUTE">
+        <comment>須由單位執行</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="869" parent="41" name="NEED_REPORT">
+        <comment>須打報告</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="870" parent="41" name="DEFAULT_VALUE">
+        <comment>總量定為內定值?</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="871" parent="41" name="DENTAL">
+        <comment>需要填牙位</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="872" parent="41" name="DENTAL_QTY_CHECK">
+        <comment>依牙位進行數量檢查</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="873" parent="41" name="MED_CONS">
+        <comment>用藥限制&#xd;
+若為Y, 須CHECK pricecons</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="874" parent="41" name="AUTOCOMPUTE">
+        <comment>自動計算自費價</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="875" parent="41" name="ANTI_TB_MED">
+        <comment>抗結核用藥</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="876" parent="41" name="OP_DIV_NO">
+        <comment>手術所屬科別</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="877" parent="41" name="SUB_DIV_NO">
+        <comment>屬健保特定次專科&#xd;
+若批價時有批入此醫令根據看診醫師是否有此次專科執照, 提醒健保科別更改</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="878" parent="41" name="DEFQTY">
+        <comment>批價內定數量</comment>
+        <data-type>decimal(6,2)</data-type>
+      </column>
+      <column id="879" parent="41" name="DRG_CODE">
+        <comment>住院DRG碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="880" parent="41" name="DEFDAY">
+        <comment>批價內定天數</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="881" parent="41" name="DEFUNUSE">
+        <comment>非常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="882" parent="41" name="DEFUSE">
+        <comment>常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="883" parent="41" name="DEFUSETIME">
+        <comment>使用時間</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="884" parent="41" name="DEFTQTY">
+        <comment>批價內定總量</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="885" parent="41" name="DEFMETHOD">
+        <comment>途徑1</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="886" parent="41" name="DEFMETHOD1">
+        <comment>途徑2</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="887" parent="41" name="DEFMETHOD2">
+        <comment>途徑3</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="888" parent="41" name="INP_OPD">
+        <comment>門診/住院/全部</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="889" parent="41" name="CTRL_TYPE">
+        <comment>管制藥種類</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="890" parent="41" name="CTRL_CLASS">
+        <comment>管制藥級別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="891" parent="41" name="CTRL_DAY">
+        <comment>管制天數</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="892" parent="41" name="HE_NOTE">
+        <comment>健保相關規定</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="893" parent="41" name="PPF_ACNT_NO">
+        <comment>PPF費用別</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="894" parent="41" name="EFFECT_REMARK">
+        <comment>藥力作用(藥袋)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="895" parent="41" name="OPD_DRG_CODE">
+        <comment>門診DRG碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="896" parent="41" name="INPHE_CHECK_DAYS">
+        <comment>住院申報檢核日數</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="897" parent="41" name="TREAT_EMG">
+        <comment>醫療可急作?(Y/N) -- - 不使用</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="898" parent="41" name="BACK_FLAG">
+        <comment>可退藥否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="899" parent="41" name="KIND_LIMIT_TQTY">
+        <comment>同一月同屬性用藥總量限制</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="900" parent="41" name="LEAST_TQTY">
+        <comment>最小給藥總量</comment>
+        <data-type>int(6)</data-type>
+      </column>
+      <column id="901" parent="41" name="GRINDABLE">
+        <comment>是否可磨粉(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="902" parent="41" name="PPF_FLAG">
+        <comment>醫令異動加寫記錄</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="903" parent="41" name="EMG_HE_FLAG">
+        <comment>急診申報</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="904" parent="41" name="SPEC_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="905" parent="41" name="DQ_NO">
+        <comment>論質計酬代碼</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="906" parent="41" name="DQ_STEP">
+        <comment>論質計酬階段</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="907" parent="41" name="EMINENT_TYPE">
+        <comment>卓越指標分類</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="908" parent="41" name="START_AGE">
+        <comment>健保局用藥限制起始年齡</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="909" parent="41" name="END_AGE">
+        <comment>健保局用藥限制結束年齡</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="910" parent="41" name="NHI_CONS_TYPE">
+        <comment>健保局用藥限制歸類(JUSTNAME.CATEGORIES = &apos;NHICONS&apos;)</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="911" parent="41" name="NHI_CONS_DAYS">
+        <comment>健保局用藥限制天數</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="912" parent="41" name="NO_PAY_USE_MED">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="913" parent="41" name="NS_MED">
+        <comment>住院公藥</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="914" parent="41" name="DOSE">
+        <comment>劑量</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="915" parent="41" name="INDEX_CODE">
+        <comment>索引碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="916" parent="41" name="MEDTYPEB">
+        <comment>藥理大類</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="917" parent="41" name="MEDTYPED">
+        <comment>藥理細類</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="918" parent="41" name="DAN_FLAG">
+        <comment>是否為高危險藥品</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="919" parent="41" name="DEFCARD_SEQ">
+        <comment>批價時帶入卡號</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="920" parent="41" name="TRANS_CODE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="921" parent="41" name="MEDBAG_UNIT_TQTY">
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="922" parent="41" name="MEDBAG_UNIT">
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="923" parent="41" name="LIMIT_QTY">
+        <data-type>int(6)</data-type>
+      </column>
+      <column id="924" parent="41" name="IMAGE_FLAG">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="925" parent="41" name="NEED_DATETIME">
+        <comment>是否需填報執行起迄日期時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="926" parent="41" name="NEED_DATE">
+        <comment>是否需填報執行起迄日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="927" parent="41" name="NHI_CONS_MM">
+        <comment>間隔?月份</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="928" parent="41" name="ICD10PCS">
+        <comment>醫令對應之PCS碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="929" parent="41" name="ICD10PCS2">
+        <comment>醫令對應之PCS2</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="930" parent="41" name="ICD10PCS3">
+        <comment>醫令對應之PCS3</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="931" parent="41" name="ICD10PCS4">
+        <comment>醫令對應之PCS4</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="932" parent="41" name="ICD10PCS5">
+        <comment>醫令對應之PCS5</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <index id="933" parent="41" name="PRICE_ACNT_NO">
+        <columns>ACNT_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="934" parent="41" name="PRICE_CTRL_TYPE">
+        <columns>CTRL_TYPE
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="935" parent="41" name="PRICE_FULL_NAME">
+        <columns>FULL_NAME</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="936" parent="41" name="PRICE_KIND_NO">
+        <columns>KIND_NO
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="937" parent="41" name="PRICE_NHI">
+        <columns>NHI_CONS_TYPE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="938" parent="41" name="PRICE_OP_DIV_NO">
+        <columns>OP_DIV_NO
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="939" parent="41" name="PRICE_REQ_FORM">
+        <columns>REQ_FORM
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="940" parent="41" name="PRIMARY">
+        <columns>CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="941" parent="42" name="PT_TYPE">
+        <comment>患者身份</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="942" parent="42" name="TYPE_NAME">
+        <comment>身份名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="943" parent="42" name="PRICE_TYPE">
+        <comment>GET自費價OR健保價</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="944" parent="42" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="945" parent="42" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="946" parent="42" name="PRIMARY">
+        <columns>PT_TYPE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="947" parent="43" name="REQ_NO">
+        <comment>檢查申請單號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="948" parent="43" name="REQ_DATETIME">
+        <comment>申請日期時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="949" parent="43" name="PRINT_TIMES">
+        <comment>此單據列印次數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="950" parent="43" name="INP_OPD">
+        <comment>門/急/住診</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="951" parent="43" name="FORM_NO">
+        <comment>申請單類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="952" parent="43" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="953" parent="43" name="SERNO">
+        <comment>住院流水號/門診重複號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="954" parent="43" name="ORDER_DATE">
+        <comment>門診日期/住院帳款日</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="955" parent="43" name="PROCESSED">
+        <comment>已處理</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="956" parent="43" name="SEQ_NO">
+        <comment>X光登記號碼</comment>
+        <data-type>int(9)</data-type>
+      </column>
+      <column id="957" parent="43" name="EXAM_TYPE">
+        <comment>檢驗類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="958" parent="43" name="EXAM_SAMPLE">
+        <comment>檢體代碼</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="959" parent="43" name="EXAM_INFORMATION">
+        <comment>檢體名稱</comment>
+        <data-type>varchar(240)</data-type>
+      </column>
+      <column id="960" parent="43" name="SCH_DATE">
+        <comment>預約日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="961" parent="43" name="SCH_TIME">
+        <comment>預約時間</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="962" parent="43" name="DIAGNOSIS">
+        <comment>臨時診斷</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="963" parent="43" name="PACK_TYPE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="964" parent="43" name="CONFIRM_DATETIME">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="965" parent="43" name="CONFIRM_CLERK">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="966" parent="43" name="NOLEND_REASON">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="967" parent="43" name="STOCK">
+        <comment>執行單位</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="968" parent="43" name="REL_REQ_NO">
+        <comment>執行時申請單號</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="969" parent="43" name="SCRAP_DATE">
+        <comment>取消檢查日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="970" parent="43" name="EXAM_ANTI">
+        <comment>是否使用抗生素</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="971" parent="43" name="EXAM_DATETIME">
+        <comment>採檢日期</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="972" parent="43" name="REL_REQ_NO_O">
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="973" parent="43" name="PROCESSED_DATE">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="974" parent="43" name="REMARK">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="975" parent="43" name="CHECK_IN_FLAG">
+        <comment>報到否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="976" parent="43" name="CHECK_IN_DATETIME">
+        <comment>報到時間</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <index id="977" parent="43" name="REQUISITION_CHARTNO_PROCESSED">
+        <columns>CHART_NO
+PROCESSED</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="978" parent="43" name="REQUISITION_CHART_NO_SERNO">
+        <columns>CHART_NO
+SERNO
+ORDER_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="979" parent="43" name="REQUISITION_ORDER_DATE">
+        <columns>ORDER_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="980" parent="43" name="REQUISITION_PROCESSED_DATE">
+        <columns>PROCESSED_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="981" parent="43" name="REQUISITION_PROCESSED_SCHDATE">
+        <columns>PROCESSED
+SCH_DATE
+FORM_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="982" parent="43" name="REQUISITION_SCH_DATE">
+        <columns>SCH_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="983" parent="43" name="PRIMARY">
+        <columns>REQ_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="984" parent="44" name="FORM_NO">
+        <comment>表單編號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="985" parent="44" name="FORM_NAME">
+        <comment>表單名稱</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="986" parent="44" name="NOTE">
+        <comment>注意事項</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="987" parent="44" name="SUBTEL1">
+        <comment>分機1</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="988" parent="44" name="SUBTEL2">
+        <comment>分機2</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="989" parent="44" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="990" parent="44" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="991" parent="44" name="PRIMARY">
+        <columns>FORM_NO</columns>
+        <primary>1</primary>
+      </key>
+      <column id="992" parent="45" name="CODE">
+        <comment>藥品代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="993" parent="45" name="FORMAL_NAME">
+        <comment>學名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="994" parent="45" name="FULL_NAME_C">
+        <comment>中文名</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="995" parent="45" name="MED_TYPE">
+        <comment>藥品類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="996" parent="45" name="MED_TYPE2">
+        <comment>藥品類別2</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="997" parent="45" name="MED_CLASS">
+        <comment>懷孕分級</comment>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="998" parent="45" name="INVKIND">
+        <comment>藥理分類</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="999" parent="45" name="ADAPTIVE">
+        <comment>適應症(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1000" parent="45" name="USAGE">
+        <comment>用法用量(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1001" parent="45" name="SIDE_EFFECT">
+        <comment>副作用(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1002" parent="45" name="ADVERSE">
+        <comment>禁忌(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1003" parent="45" name="NOTE">
+        <comment>注意事項(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1004" parent="45" name="FACTOR">
+        <comment>劑型(成分)含量(*)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1005" parent="45" name="KEYIN_DATE">
+        <comment>輸入日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1006" parent="45" name="KEYIN_CLERK">
+        <comment>輸入人員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1007" parent="45" name="FULL_NAME_E">
+        <comment>英文</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="1008" parent="45" name="ADAPTIVE_E">
+        <comment>適應症(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1009" parent="45" name="USAGE_E">
+        <comment>用法用量(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1010" parent="45" name="SIDE_EFFECT_E">
+        <comment>副作用(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1011" parent="45" name="ADVERSE_E">
+        <comment>禁忌(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1012" parent="45" name="NOTE_E">
+        <comment>注意事項(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1013" parent="45" name="FACTOR_E">
+        <comment>劑型(成分)含量(*)-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1014" parent="45" name="FACADE">
+        <comment>外觀</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1015" parent="45" name="FACADE_E">
+        <comment>外觀-英文</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1016" parent="45" name="WARN_MED_NOTE">
+        <comment>高警訊</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1017" parent="45" name="IMAGE_NAME">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <key id="1018" parent="45" name="PRIMARY">
+        <columns>CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1019" parent="46" name="CODE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1020" parent="46" name="PHOTO">
+        <data-type>longblob</data-type>
+      </column>
+      <index id="1021" parent="46" name="MEDICINEPHOTO_PK">
+        <columns>CODE</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="1022" parent="46" name="MEDICINEPHOTO_PK">
+        <columns>CODE</columns>
+        <underlying-index>MEDICINEPHOTO_PK</underlying-index>
+      </key>
+      <key id="1023" parent="46" name="PRIMARY">
+        <columns>CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1024" parent="47" name="MED_CODE">
+        <comment>醫令代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1025" parent="47" name="CODE">
+        <comment>醫令代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1026" parent="47" name="REMARK">
+        <comment>說明</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="1027" parent="47" name="INP_OPD">
+        <comment>門/住/全部</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="1028" parent="47" name="PRIMARY">
+        <columns>MED_CODE
+CODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1029" parent="48" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1030" parent="48" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1031" parent="48" name="START_DATE">
+        <comment>起始日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="1032" parent="48" name="END_DATE">
+        <comment>結束日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="1033" parent="48" name="DOCTOR_NO">
+        <comment>醫師代號</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1034" parent="48" name="MEMO">
+        <data-type>text</data-type>
+      </column>
+      <key id="1035" parent="48" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1036" parent="49" name="ID">
+        <comment>PKEY</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="1037" parent="49" name="VIEW_DATE">
+        <comment>看診日期Cdate</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1038" parent="49" name="CHART_NO">
+        <comment>病歷號</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1039" parent="49" name="LOCATION_CODE">
+        <comment>位置代號</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <key id="1040" parent="49" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1041" parent="50" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1042" parent="50" name="LOCATION_CODE">
+        <comment>位置代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="1043" parent="50" name="VIEW_DATE">
+        <comment>C日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1044" parent="50" name="APN">
+        <comment>早午晚(1/2/3)</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="1045" parent="50" name="SEQ_NO">
+        <comment>順序號</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1046" parent="50" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1047" parent="50" name="PT_NAME">
+        <comment>患者姓名</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="1048" parent="50" name="EFF_FLAG">
+        <comment>有效否(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="1049" parent="50" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1050" parent="51" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1051" parent="51" name="LOCATION_CODE">
+        <comment>位置代號</comment>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="1052" parent="51" name="CLINIC_NO">
+        <comment>診間號(當Location_Code = 10)</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1053" parent="51" name="CURRENT_NO">
+        <comment>目前服務號</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <key id="1054" parent="51" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1055" parent="52" name="ID">
+        <comment>ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1056" parent="52" name="CODE">
+        <comment>類別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1057" parent="52" name="SEQNO">
+        <data-type>int(7)</data-type>
+      </column>
+      <key id="1058" parent="52" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1059" parent="53" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1060" parent="53" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1061" parent="53" name="CHART_NO">
+        <comment>病歷號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1062" parent="53" name="DUPLICATE_NO">
+        <comment>看診次數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1063" parent="53" name="REC_COUNT">
+        <comment>筆數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="1064" parent="53" name="CODE">
+        <comment>批價代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1065" parent="53" name="IDENTIFY_NO">
+        <comment>醫令識別碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="1066" parent="53" name="ACNT_NO">
+        <comment>帳號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1067" parent="53" name="PRICE_TYPE">
+        <comment>批價類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="1068" parent="53" name="QTY">
+        <comment>單次劑量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(6)</data-type>
+      </column>
+      <column id="1069" parent="53" name="UNUSE">
+        <comment>非常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1070" parent="53" name="USE">
+        <comment>常規用法</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1071" parent="53" name="USETIME">
+        <comment>使用時間</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1072" parent="53" name="DAY">
+        <comment>用藥天數</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1073" parent="53" name="TQTY">
+        <comment>總用量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1074" parent="53" name="SELF">
+        <comment>自費否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1075" parent="53" name="DISCOUNT">
+        <comment>折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="1076" parent="53" name="COMP_DISCOUNT">
+        <comment>電腦折扣</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="1077" parent="53" name="AMT">
+        <comment>金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="1078" parent="53" name="HE_ADD_FEE">
+        <comment>健保補差額</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="1079" parent="53" name="METHOD">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1080" parent="53" name="METHOD1">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1081" parent="53" name="METHOD2">
+        <comment>途徑</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1082" parent="53" name="EMG">
+        <comment>急作否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1083" parent="53" name="ADD_RATE">
+        <comment>加成比率</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1084" parent="53" name="OFFICE">
+        <comment>入帳科室</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1085" parent="53" name="STOCK">
+        <comment>庫別</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1086" parent="53" name="DOCTOR_NO">
+        <comment>開單醫師</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1087" parent="53" name="ORDER_DATETIME">
+        <comment>處方開立時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1088" parent="53" name="EXEC_CLERK">
+        <comment>執行人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1089" parent="53" name="EXEC_DATETIME">
+        <comment>執行日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1090" parent="53" name="REPORT_CLERK">
+        <comment>報告人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1091" parent="53" name="REPORT_DATETIME">
+        <comment>報告日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1092" parent="53" name="CASHIER">
+        <comment>收費員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1093" parent="53" name="KEYIN_DATETIME">
+        <comment>輸入日期時間</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1094" parent="53" name="KEYIN_CLERK">
+        <comment>輸入員</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1095" parent="53" name="MODIFY_DATETIME">
+        <comment>修改日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1096" parent="53" name="MODIFY_CLERK">
+        <comment>修改人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1097" parent="53" name="REQ_NO">
+        <comment>單據編號</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="1098" parent="53" name="OPERATION">
+        <comment>開刀別(主副刀)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1099" parent="53" name="GRIND">
+        <comment>磨粉(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1100" parent="53" name="CONS_NO">
+        <comment>用藥限制選擇</comment>
+        <data-type>varchar(70)</data-type>
+      </column>
+      <column id="1101" parent="53" name="NOEXE_REASON">
+        <comment>檢查不執行原因</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1102" parent="53" name="OFFICE1">
+        <comment>成本科室</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1103" parent="53" name="MAX_PRICE_TIMES">
+        <comment>批價序</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="1104" parent="53" name="ORDER_POS">
+        <comment>處置部位(參考JUSTNAME/ORDER_POS)</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1105" parent="53" name="START_DATE">
+        <comment>執行日期-起</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1106" parent="53" name="START_TIME">
+        <comment>執行時間-起</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="1107" parent="53" name="END_DATE">
+        <comment>執行日期-迄</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1108" parent="53" name="END_TIME">
+        <comment>執行時間-迄</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="1109" parent="53" name="DICOM_FLAG">
+        <comment>影像來源(1:複製片;2:PACS;3:行政院衛生署全國醫療影像交換中心;9:其他)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1110" parent="53" name="PROJECT_NO">
+        <comment>事前審查受理編號</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <index id="1111" parent="53" name="OPDACNT_CHART_NO">
+        <columns>CHART_NO
+CODE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1112" parent="53" name="OPDACNT_CODE_DATE">
+        <columns>CODE
+VIEW_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1113" parent="53" name="OPDACNT_REQNO_EXEC">
+        <columns>REQ_NO
+EXEC_DATETIME
+EXEC_CLERK</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1114" parent="53" name="OPDACNT_REQ_NO">
+        <columns>REQ_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="1115" parent="53" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1116" parent="54" name="ID">
+        <comment>PKey</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="1117" parent="54" name="VIEW_DATE">
+        <comment>看診日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1118" parent="54" name="CHART_NO">
+        <comment>病歷號碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1119" parent="54" name="DUPLICATE_NO">
+        <comment>重複序號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1120" parent="54" name="DOCTOR_NO">
+        <comment>醫師代碼</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1121" parent="54" name="DIV_NO">
+        <comment>科別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1122" parent="54" name="CASH_TYPE">
+        <comment>收費類別</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1123" parent="54" name="FV_RV">
+        <comment>初診/複診 (1.初診 2.複診)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1124" parent="54" name="SEND_CHART">
+        <comment>送病歷否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1125" parent="54" name="PT_TYPE">
+        <comment>患者身份</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1126" parent="54" name="CARD_SEQ">
+        <comment>卡號</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="1127" parent="54" name="PART_NO">
+        <comment>部份負擔代碼</comment>
+        <data-type>varchar(3)</data-type>
+      </column>
+      <column id="1128" parent="54" name="EXPECT_VIEW_TIME">
+        <comment>預計看診時間</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="1129" parent="54" name="COMEFROM_NO">
+        <comment>合約機構</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1130" parent="54" name="REGKIND_NO">
+        <comment>看診目的</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1131" parent="54" name="VISIT">
+        <comment>看診否N未看U未完成F完成</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1132" parent="54" name="SHEET_NO">
+        <comment>調閱單號碼</comment>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="1133" parent="54" name="APPOINTMENT">
+        <comment>june:預約方式(1.現掛 2.預約)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1134" parent="54" name="CHECK_IN_DATETIME">
+        <comment>報到時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1135" parent="54" name="GIVE_ORDER">
+        <comment>(0/1/2)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1136" parent="54" name="APN">
+        <comment>(1/2/3)時段</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(1)</data-type>
+      </column>
+      <column id="1137" parent="54" name="ZONE">
+        <comment>(A..Z)院區</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1138" parent="54" name="CLINIC">
+        <comment>診間</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1139" parent="54" name="VIEW_NO">
+        <comment>看診號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="1140" parent="54" name="SUPPLE_FLAG">
+        <comment>(1/2/3)欠單否</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1141" parent="54" name="SUPPLE_DATETIME">
+        <comment>補卡日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1142" parent="54" name="SUPPLE_CLERK">
+        <comment>補卡退押人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1143" parent="54" name="DISCOUNT_PTR">
+        <comment>折扣代號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1144" parent="54" name="DISEASE_CODE">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1145" parent="54" name="DISEASE_NAME">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1146" parent="54" name="DISEASE_CODE1">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1147" parent="54" name="DISEASE_NAME1">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1148" parent="54" name="DISEASE_CODE2">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1149" parent="54" name="DISEASE_NAME2">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1150" parent="54" name="DISEASE_CODE3">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1151" parent="54" name="DISEASE_NAME3">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1152" parent="54" name="DISEASE_CODE4">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1153" parent="54" name="DISEASE_NAME4">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1154" parent="54" name="DISEASE_CODE5">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1155" parent="54" name="DISEASE_NAME5">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1156" parent="54" name="DISEASE_CODE6">
+        <comment>疾病代碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1157" parent="54" name="DISEASE_NAME6">
+        <comment>疾病名稱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="1158" parent="54" name="OP_ICD9">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1159" parent="54" name="OP_ICD9_1">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1160" parent="54" name="OP_ICD9_2">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1161" parent="54" name="OP_ICD9_3">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1162" parent="54" name="OP_ICD9_4">
+        <comment>手術碼</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="1163" parent="54" name="TRANS_IN">
+        <comment>轉入醫療院所</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="1164" parent="54" name="PRICING_CLERK">
+        <comment>由誰批價中</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1165" parent="54" name="DRG_CODE">
+        <comment>DRG碼</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1166" parent="54" name="POST_REG_FLAG">
+        <comment>出掛號費否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1167" parent="54" name="POST_ATTEND_FEE">
+        <comment>出診察費否(Y/N)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1168" parent="54" name="TRIAGE">
+        <comment>急診檢傷分類(1/2/3/4)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1169" parent="54" name="MED_DAYS">
+        <comment>用藥天數</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1170" parent="54" name="MED_ORDER">
+        <comment>領藥號</comment>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="1171" parent="54" name="WHO_DISC">
+        <comment>折扣批准人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1172" parent="54" name="HOSPITALIZE_CLERK">
+        <comment>醫囑住院輸入人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1173" parent="54" name="HOSPITALIZE_DATETIME">
+        <comment>醫囑住院日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1174" parent="54" name="SERNO">
+        <comment>住院流水號</comment>
+        <data-type>int(7)</data-type>
+      </column>
+      <column id="1175" parent="54" name="BLOCKED_REASON">
+        <comment>帳款凍結(1.逾期 2.住院)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1176" parent="54" name="REG_CLERK">
+        <comment>掛號員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1177" parent="54" name="REG_DATETIME">
+        <comment>掛號日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1178" parent="54" name="OPD_CLERK">
+        <comment>批價人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1179" parent="54" name="OPD_DATETIME">
+        <comment>批價日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1180" parent="54" name="TREAT_CLERK">
+        <comment>診間處理人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1181" parent="54" name="TREAT_DATETIME">
+        <comment>診間處理日期時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1182" parent="54" name="REG_AMT">
+        <comment>應收掛號費</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="1183" parent="54" name="DISC_REG_AMT">
+        <comment>掛號費折扣金額</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="1184" parent="54" name="CASE_TYPE">
+        <comment>申報案件(Default)&#xd;
+                                           原為 REAL_EMG</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1185" parent="54" name="CHRONIC_SEQ">
+        <comment>連續處方箋序號</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="1186" parent="54" name="HE_DATE">
+        <comment>轉申報日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1187" parent="54" name="BEGIN_DUPLICATE">
+        <comment>療程首日重複號</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1188" parent="54" name="BEGIN_DATE">
+        <comment>療程首日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1189" parent="54" name="COURSE_TYPE">
+        <comment>療程種類</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1190" parent="54" name="COURSE_DEADLINE">
+        <comment>療程期限日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1191" parent="54" name="COURSE_RECENT_DATE">
+        <comment>最近治療日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1192" parent="54" name="COURSE_TOTAL_TIMES">
+        <comment>總治療次數</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1193" parent="54" name="COURSE_TIMES">
+        <comment>已治療次數</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="1194" parent="54" name="DISCOUNT_RELATION">
+        <comment>人工折扣批准人</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1195" parent="54" name="REG_STATUS">
+        <comment>1.路倒&#xd;
+                                            2.車禍昏迷&#xd;
+                                            3.非健保身份掛號&#xd;
+                                            7.出生嬰兒</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1196" parent="54" name="FORCE_TYPE">
+        <comment>1.家暴 2.性侵害</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1197" parent="54" name="CARD_TYPE">
+        <comment>卡別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1198" parent="54" name="IC_CARD_NO">
+        <comment>IC卡號</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="1199" parent="54" name="CHILD_BIRTH_DATE">
+        <comment>新生兒出生日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1200" parent="54" name="CHILD_BORN_NOTE">
+        <comment>新生兒胞胎註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1201" parent="54" name="CLINIC_TYPE">
+        <comment>就醫類別</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1202" parent="54" name="CLINIC_NEW_BORN_NOTE">
+        <comment>新生兒就醫註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1203" parent="54" name="CLINIC_DATE_TIME">
+        <comment>就診日期時間</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="1204" parent="54" name="CLINIC_SUPPLE_NOTE">
+        <comment>補卡註記</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1205" parent="54" name="CLINIC_SEQ_NO">
+        <comment>就醫序號</comment>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="1206" parent="54" name="HEAL_NOTE">
+        <comment>保健服務項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1207" parent="54" name="HEAL_SERVICE_ITEM">
+        <comment>保健檢查項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1208" parent="54" name="PREGNANT_ITEM">
+        <comment>孕婦產檢項目</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1209" parent="54" name="SECURE_SIGN">
+        <comment>安全簽章</comment>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="1210" parent="54" name="CARDSEQ_STATUS">
+        <comment>是否已取得就醫序號</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1211" parent="54" name="SAM_ID">
+        <comment>安全模組</comment>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="1212" parent="54" name="HOSP_ID">
+        <comment>醫院</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1213" parent="54" name="TRANSED">
+        <comment>轉檔否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1214" parent="54" name="CARD_ERROR_CODE">
+        <comment>寫卡失敗碼</comment>
+        <data-type>decimal(4)</data-type>
+      </column>
+      <column id="1215" parent="54" name="TRANS_TYPE">
+        <comment>資料型態(1: 健保就醫/2: 預防接種)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1216" parent="54" name="TRANS_KIND">
+        <comment>資料格式(1:正常/2:異常/3:正常補正/4:異常補正)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1217" parent="54" name="DATA_CORRECT">
+        <comment>資料正確(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1218" parent="54" name="DRUGGIST_NO">
+        <comment>調劑藥師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1219" parent="54" name="CHECK_DRUGGIST_NO">
+        <comment>複核藥師</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1220" parent="54" name="STOP_RECHECK_FEE">
+        <comment>不再重過基本費用(Y/N)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1221" parent="54" name="OCCUP_DISEASE_FLAG">
+        <comment>是否職傷初診</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1222" parent="54" name="APPOINTMENT_MODE">
+        <comment>掛號方式(1/2.現掛 3/4.電話 5/6.診間 7/8.語音)  奇數:當診 , 偶數:非當診</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1223" parent="54" name="INCOME_CLERK">
+        <comment>其它收入批價員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1224" parent="54" name="INCOME_DATETIME">
+        <comment>其它收入最後異動時間</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="1225" parent="54" name="MERGE_VIEW_DATE">
+        <comment>合併申報之看診日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1226" parent="54" name="MERGE_DUPLICATE_NO">
+        <comment>合併申報之序號</comment>
+        <data-type>decimal(2)</data-type>
+      </column>
+      <column id="1227" parent="54" name="MERGE_REPORT_CLASS">
+        <comment>合併申報申報類別</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1228" parent="54" name="OPDACNT_COUNT">
+        <comment>醫令數量</comment>
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="1229" parent="54" name="ADMITTANCE">
+        <comment>人工折扣核準人員</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="1230" parent="54" name="EMG_ACCRUE">
+        <comment>急診加成</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1231" parent="54" name="CUT_HE_DATE">
+        <comment>切帳日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1232" parent="54" name="TRANS_IN_TYPE">
+        <comment>轉入類別(06轉入 07門診手術7日內回診 08出院患者7日內回診)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1233" parent="54" name="TRANS_OUT_TYPE">
+        <comment>轉出/需回診類別(DA轉出 DB門診手術7日內回診 DC出院患者7日內回診)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1234" parent="54" name="TRANS_OUT_HOSP">
+        <comment>轉出之醫事機構代號</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1235" parent="54" name="DISABILITY_FLAG">
+        <comment>是否有殘障手冊</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1236" parent="54" name="COURSE_MERGE_STATUS">
+        <comment>是否已合併至下月同療首日</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1237" parent="54" name="SPEC_NO">
+        <comment>特定治療項目代碼</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1238" parent="54" name="NEED_CUT_CASE">
+        <comment>是否含有需切帳醫令</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1239" parent="54" name="UNDECLARED">
+        <comment>是否不申報</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1240" parent="54" name="PT_TYPE_1">
+        <comment>掛號身份</comment>
+        <data-type>decimal(2)</data-type>
+      </column>
+      <column id="1241" parent="54" name="BABY_INJECT">
+        <comment>新生兒回診注射</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1242" parent="54" name="CHECK_IN_TYPE">
+        <comment>1:現場/2:電話</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1243" parent="54" name="SENDMSG_FLAG">
+        <comment>是否願意收到簡訊(願意:Y/不願意:其它值)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1244" parent="54" name="RESERVE_MSG_SENT">
+        <comment>預約簡訊已送</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1245" parent="54" name="NEED_TRACE_FLAG">
+        <comment>是否需衛教人員追蹤</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1246" parent="54" name="FRONT_CASE_TYPE">
+        <comment>前台案件(目前為未持職傷單但要申報職傷案件用)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1247" parent="54" name="HE_DISEASE_ANYS">
+        <comment>給付類別(參考JUSTNAME/HEDISEANYS)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1248" parent="54" name="UC_DIV">
+        <comment>健保科別(供整合式照護用)</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1249" parent="54" name="IC_LIMIT_DATE">
+        <comment>IC到期日</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1250" parent="54" name="BREAST_TRANS_FLAG">
+        <comment>是否做乳房追蹤</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1251" parent="54" name="TRANS_EMR_DATE">
+        <comment>轉EMR時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="1252" parent="54" name="SIGN_EMR_DATE">
+        <comment>簽章時間</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="1253" parent="54" name="HIS2EMR_COMPLETE_DATE">
+        <comment>申請轉EMR日期</comment>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1254" parent="54" name="SPEC_SENSITIVE_LABEL">
+        <comment>EMR敏感性患者註記</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="1255" parent="54" name="TRANS2EMR_COMPLETE_DATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="1256" parent="54" name="EXCHANGE_SIGN_EMR_DATE">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="1257" parent="54" name="SKIN_VALUES">
+        <comment>皮膚測試欄位 (  N:  陰性 P: 陽性   D: 拒作)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="1258" parent="54" name="IS_OCCUPATIONAL">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <index id="1259" parent="54" name="PATOPD_CHART_NO">
+        <columns>CHART_NO
+VIEW_DATE
+DUPLICATE_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1260" parent="54" name="PATOPD_CHART_SERNO">
+        <columns>CHART_NO
+SERNO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1261" parent="54" name="PATOPD_HIS2EMR">
+        <columns>HIS2EMR_COMPLETE_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1262" parent="54" name="PATOPD_REG_DATETIME">
+        <columns>REG_DATETIME</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1263" parent="54" name="PATOPD_REG_LIST">
+        <columns>VIEW_DATE
+ZONE
+APN
+CLINIC
+VIEW_NO</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1264" parent="54" name="PATOPD_TRANS2EMR_COMPLETE">
+        <columns>TRANS2EMR_COMPLETE_DATE</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="1265" parent="54" name="PATOPD_TREAT_DATETIME">
+        <columns>TREAT_DATETIME
+TREAT_CLERK</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="1266" parent="54" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="1267" parent="55" name="EDU_NUM">
+        <comment>衛教單編號</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="1268" parent="55" name="DIV_KIND">
+        <comment>科別</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="1269" parent="55" name="EDU_NAME">
+        <comment>衛教單名稱</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="1270" parent="55" name="EDU_MEMO">
+        <comment>其他說明</comment>
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="1271" parent="55" name="DOWNLOAD_POSIT">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="1272" parent="55" name="EFF_FLAG">
+        <comment>有效否</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="1273" parent="55" name="PRIMARY">
+        <columns>EDU_NUM</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

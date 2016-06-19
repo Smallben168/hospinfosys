@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read Me</title>
+</head>
+<body>
+ <div>
+     <ol>
+         <li>可使用 http://163.18.22.69/test 或 test2 來測試資料庫</li></br>
+         <li>可使用 http://163.18.22.69/rest/get_object/物件名稱?條件欄位名稱1=條件值1&條件欄位名稱2=條件值2  來取得該物件 json 資料值</li>
+         <ul>
+             <li> 例如: 查詢 [病歷號] 為 106733 號的病人</li>
+                <li type="DISC"> http://163.18.22.69/rest/get_object/chart?chart_no=106733 </li>
+         </ul>
+         <ul>
+             <li> 目前開放查詢物件</li>
+                <li type="DISC"> chart : 病歷檔</li>
+                <li type="DISC"> area : 地區檔</li>
+                <li type="DISC"> schedule : 排程檔</li>
+                <li type="DISC"> registerdevice : 患者移動設備設定 </li>
+                <li type="DISC"> deptlocation : 院內科室位置設定</li>
+                <li type="DISC"> beaconinfo : Beacon 設定檔</li>
+         </ul></br>
+         <li> 可使用 /rest/del_object/物件名稱?欄位1=欄位值1&欄位2=欄位值2   來刪除物件</li>
+             <ul>
+                 <li>數值或字串均不需加 ' '</li>
+                 <li>使用 [DELETE] </li>
+                 <li>例如 /rest/del_object/patient_status?chart_no=106733&view_date=1050512 </li>
+                 <li>目前開放可刪除物件</li>
+                     <li type="DISC"> patient_status : 病人狀態記錄表</li>
+                     <li type="DISC"> </li>
+             </ul>
+            </br>
+
+         <li>測試GCM訊息可使用 http://163.18.22.69/gcm_test/病歷號?message=訊息內容</li>
+         <ul>
+             <li>用法例 : http://163.18.22.69/gcm_test/106733?message=你好這是測試訊息</li>
+             <li> Client端設定 : Sender id =  99262725025 </li>
+             <li> Client端設定 : Package_Name = tw.com.hismax.test</li>
+             <li> Server端設定 : Server API Key =  AIzaSyC89W5Scdl3gLGOQ5fAZFluh1qosscJVek </li>
+         </ul>
+         </br>
+     <li>
+         <a href="Function_List.pdf">功能清單說明</a>
+     </li></br>
+     <li>
+         <a href="/createcase">建立測試資料</a>
+     </li></br>
+         <li> <a href="/admin">管理網站 Admin</a> (user = test, password = test1234) </li></br>
+         <li> 取得醫師照片 http://163.18.22.69/static/doctor_images/醫師代號.jpeg</li>
+     </ol>
+ </div>
+</body>
+</html>

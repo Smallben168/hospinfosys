@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Function</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        em {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+ <em> 執行時間 : {{current_time}} </em><br>
+<table border="1" width="80%">
+        <tr> <td colspan="10">select from {{ stmtObjName }} {{ stmtObjWhere }} </td></tr>
+        <tr>
+            {% for col in objectcols %}
+            <td> {{ col }} </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% if stmtObjData  %}
+                {% for row in stmtObjData %}
+
+
+
+
+                    {% empty %}
+                        <tr><td> No Data </td></tr>
+                {% endfor %}
+            {% else %}
+                <tr><td> No Data </td></tr>
+            {% endif %}
+        </tr>
+        <tr> <td colspan="2">執行時間 : {{current_time}}  </td></tr>
+    </table>
+</body>
+</html>

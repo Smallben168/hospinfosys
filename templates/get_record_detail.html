@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Function</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        em {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+<table border="1" width="100%">
+
+        <tr> <td colspan="10"><em>{{ view_date }} : {{ pt_name }}  藥品清單 {{STATIC_URL}} - {{ BASE_DIR }} </em> <input type="button" value="<< 上一頁 " onclick="history.back()"></td></tr>
+        {% if dataObj  %}
+            {% for row in dataObj %}
+                <tr>
+                    {% load staticfiles %}
+                    <td rowspan="5" width="20%"><img src= "{% static row.pict  %}" WIDTH="100%" /> </td>
+                    <td width="20%"> {{ row.code }} </td>
+                    <td width="60%"> {{ row.formal_name }} / {{ row.full_name_c }}</td>
+                </tr>
+                <tr>
+                    <td>適應症</td>
+                    <td>{{ row.adapive }}</td>
+                </tr>
+                <tr>
+                    <td>副作用</td>
+                    <td>{{ row.side_effect }}</td>
+                </tr>
+                <tr>
+                    <td>禁忌</td>
+                    <td>{{ row.advrerse }}</td>
+                </tr>
+                <tr>
+                    <td>注意事項</td>
+                    <td>{{ row.note }}</td>
+                </tr>
+                {% endfor %}
+        {% else %}
+                <tr><td> 沒有藥品內容 </td></tr>
+        {% endif %}
+
+        <tr> <td colspan="10">執行時間 : {{current_time}}  </td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template.建立測資料</title>
+</head>
+<body>
+<ol>
+    <li>病人預約記錄提醒通知</li>
+    
+    <li>建立預約病人掛號資料</li>
+
+<form id="form1" name="form1" method="post" action="/switchfun/">
+    {% csrf_token %}
+
+  <table width="60%" border="1">
+    <caption>
+      建立病人記錄與清除病人狀態記錄表
+    </caption>
+    <tbody>
+      <tr>
+        <th scope="row">病歷號碼</th>
+        <td>
+        <input type="text" name="chart_no" placeholder="106733" width="90%" id="txt_chartno" value="106733"></td>
+      </tr>
+      <tr>
+        <th scope="row">看診日期</th>
+        <td>
+        <input type="text" name="view_date" placeholder="1050515" data id="txt_viewdate" value={{ cToday }}></td>
+      </tr>
+      <tr>
+        <th scope="row">看診號</th>
+        <td><input type="text" name="view_no" placeholder="25" data id="txt_viewno" value="25"></td></td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button1" type="submit" id="button1" form="form1" value="開始建立"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</form>
+<p>&nbsp;</p>
+<li>建立排隊清單</li>
+
+<form id="form2" name="form2" method="post" action="/switchfun/">
+    {% csrf_token %}
+  <table width="60%" border="1">
+    <caption>
+      建立排隊清單
+    </caption>
+    <tbody>
+      <tr>
+        <th scope="row">位置代碼</th>
+        <td>
+            <input type="text" name="location_code" placeholder="10" width="90%" id="txt_location_code" value="20"></br>
+            10 : 掛號室(大門口) / 20 : 衛教室 / 31 : 驗驗科 / 32 : X光室
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">看診日期</th>
+        <td>
+            <input type="text" name="view_date" placeholder="1050515" width="90%" id="txt_view_date" value={{ cToday }}>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">時段</th>
+        <td>
+            <input type="text" name="apn" placeholder="1" width="90%" id="txt_apn" value="1">
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">產生筆數</th>
+        <td>
+            <input type="text" name="rec_no" placeholder="15" data id="txt_recno" value="15"><br/>(10->24, 20->15)
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button2" type="submit" id="button2" form="form2" value="開始建立"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<p>&nbsp;</p>
+<li>建立檢驗,檢查申請單</li>
+
+<form id="form3" name="form3" method="post" action="/switchfun/">
+    {% csrf_token %}
+  <table width="60%" border="1">
+    <caption>
+      建立及清除病人檢驗檢查申請單
+    </caption>
+    <tbody>
+      <tr>
+        <th scope="row">病歷號碼</th>
+        <td>
+        <input type="text" name="chart_no" placeholder="106733" width="90%" id="txt_chartno" value="106733"></td>
+      </tr>
+      <tr>
+        <th scope="row">看診日期</th>
+        <td>
+        <input type="text" name="view_date" placeholder="1050515" data id="txt_viewdate" value={{ cToday }}></td>
+      </tr>
+      <tr>
+          <th scope="row">單據類別</th>
+          <td>
+              <input type="checkbox" name="check_lab" value="lab">
+              <label for="check_lab">檢驗申請單</label>
+              <input type="checkbox" name="check_x" value="xray">
+              <label for="check_x">X光申請單</label>
+          </td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button3" type="submit" id="button3" form="form3" value="開始建立"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+    <p>&nbsp;</p>
+<li>目前服務號設定</li>
+
+<form id="form4" name="form4" method="post" action="/switchfun/">
+    {% csrf_token %}
+  <table width="60%" border="1">
+    <caption>
+      目前服務號設定
+    </caption>
+    <tbody>
+      <tr>
+          <th scope="row">位置代號</th>
+          <td>
+            <select name="location_code">
+                <option value="10">婦產科一診</option>
+                <option value="20">衛教室</option>
+                <option value="31">檢驗科</option>
+                <option value="32">X光室</option>
+            </select>
+          </td>
+      <tr>
+          <th scope="row">目前服務號</th>
+          <td>
+            <input type="text" name="current_no" placeholder="13" width="90%" id="txt_current_no" value="24"><br/>
+              (10->24, 20->15)
+          </td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button4" type="submit" id="button4" form="form4" value="確定"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+    <p>&nbsp;</p>
+<li>呼叫病人</li>
+<form id="form5" name="form5" method="post" action="/switchfun/">
+    {% csrf_token %}
+  <table width="60%" border="1">
+    <caption>
+      呼叫病人, 主動傳送訊息
+    </caption>
+    <tbody>
+      <tr>
+          <th scope="row">病歷號</th>
+          <td>
+            <input type="text" name="chart_no" placeholder="106733" width="90%" id="txt_chart_no" value="106733">
+          </td>
+      </tr>
+      <tr>
+          <th scope="row">訊息內容</th>
+          <td>
+            <select name="message">
+                <option value="您有預約今日看診，提醒您準時前來看診, XX醫院關心您">您有預約今日看診，提醒您準時前來看診</option>
+                <option value="您今日的看診費用為 $320, XX醫院關心您">您今日的看診費用為 $320</option>
+            </select>
+          </td>
+
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button5" type="submit" id="button5" form="form5" value="傳送訊息"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</ol>
+</body>
+</html>
