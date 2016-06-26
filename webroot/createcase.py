@@ -238,7 +238,10 @@ def setPatient_serviceno(request):
         #未有該位置記錄, 新增
         serNoRec = hismaxdb.models.PatientServiceno()
         serNoRec.location_code = _location_code
-        serNoRec.clinic_no = 0
+        if _location_code=='10':
+            serNoRec.clinic_no = 1
+        else:
+            serNoRec.clinic_no = 0
     finally:
         serNoRec.current_no = _seq_no
         serNoRec.save()

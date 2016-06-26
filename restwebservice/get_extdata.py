@@ -1,5 +1,6 @@
 
 import hismaxdb.models
+import sys
 from django.db.models import Max
 
 #取得員工/醫師姓名
@@ -20,6 +21,7 @@ def getCurrentNoByLoc(l_locationCode):
     else:
         num = patientServiceno.current_no
     return  num
+
 
 #依診間號取得位置號
 def getLocationCodeByClinic(l_clinic):
@@ -106,4 +108,16 @@ def getDivisionName(div_no):
         rtnStr = div_no
     else:
         rtnStr = div.div_name
+    return rtnStr
+
+#取得診間名稱
+def gerClinicPs(clinic_no):
+    c = int(clinic_no)
+    try:
+        clinicPs = hismaxdb.models.Clinps.objects.get(zone='A', clinic=1)
+    except:
+        print("error", sys.exc_info())
+        rtnStr = clinic_no
+    else:
+        rtnStr = clinicPs.location
     return rtnStr

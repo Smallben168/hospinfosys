@@ -47,6 +47,8 @@ def process_reg(chart_no, cnow, location_code, pt_name):
         if '_status' in rec:
             pass
         else:
+            #--- 加入診間名稱 ----
+            rec['clinic_ps']= restwebservice.get_extdata.gerClinicPs(rec['clinic'])
             #---- 加入 doctor_name ----------
             rec['doctor_name'] = restwebservice.get_extdata.getEmployeeName(rec['doctor_no'])
             rec['pt_name'] = pt_name
@@ -58,6 +60,7 @@ def process_reg(chart_no, cnow, location_code, pt_name):
             #for status response
             rec['_status'] = "success"
             rec['_status_doc'] = "REG"
+
 
     return rtnDict
 
@@ -228,6 +231,20 @@ def getDeptSchedule(_locationCode, _chartno, cDate, apn, locatiodId):
         item['_status_doc'] = locatiodId
 
     return serializer.data
+
+def getCurrentNoByClinicNo(l_clinicNo):
+    rtnStr = []
+    try:
+        patientServiceno = hismaxdb.models.PatientServiceno.objects.get(clinic_no=l_clinicNo)
+    except:
+        rtnStr = [{"_status" : "error", "_status_doc" : "沒有此診間號:"+l_clinicNo}]
+    else:
+        serializer = restwebservice.serializers.PatientServiceNoSerializer(patientServiceno, many=False)
+        dat = serializer.data
+        #restwebservice.get_extdata.gerClinicPs(l_clinicNo)
+        dat['clinic_ps']= restwebservice.get_extdata.gerClinicPs(l_clinicNo)
+        rtnStr = dat
+    return  rtnStr
 
 def checkRecord(chart_no, cnow, location_code):
 

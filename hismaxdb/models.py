@@ -285,6 +285,7 @@ class Clinno(models.Model):
 
 
 class Clinps(models.Model):
+    id = models.AutoField(db_column='ID', primary_key=True)  # Field name made lowercase.
     zone = models.CharField(db_column='ZONE', max_length=1)  # Field name made lowercase.
     clinic = models.IntegerField(db_column='CLINIC')  # Field name made lowercase.
     location = models.CharField(db_column='LOCATION', max_length=14, blank=True, null=True)  # Field name made lowercase.
@@ -296,7 +297,7 @@ class Clinps(models.Model):
     class Meta:
         managed = False
         db_table = 'CLINPS'
-        unique_together = (('zone', 'clinic'),)
+
 
 
 class Disicd(models.Model):
@@ -1220,6 +1221,9 @@ class PatientTrace(models.Model):
     rec_datetime = models.DateTimeField(db_column='REC_DATETIME', auto_now_add=True)  # Field name made lowercase.
     location_code = models.CharField(db_column='LOCATION_CODE', max_length=5, blank=True, null=True)  # Field name made lowercase.
     chart_no = models.IntegerField(db_column='CHART_NO', blank=True, null=True)  # Field name made lowercase.
+
+    def __str__(self):
+        return  str(self.id) + ", 日期:" + self.rec_datetime.isoformat() + ",位置:" + self.location_code + ",病人:"+str(self.chart_no)
 
     class Meta:
         managed = False

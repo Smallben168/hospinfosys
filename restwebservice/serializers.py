@@ -51,6 +51,11 @@ class PatientServicelistSerializer(serializers.ModelSerializer):
         model = PatientServicelist
         fields = ('location_code', 'view_date', 'seq_no', 'chart_no', 'pt_name','eff_flag')
 
+class PatientServiceNoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PatientServiceno
+        fields = ('location_code', 'clinic_no', 'current_no')
+
 class RequisitionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Requisition
