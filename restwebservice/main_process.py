@@ -232,10 +232,10 @@ def getDeptSchedule(_locationCode, _chartno, cDate, apn, locatiodId):
 
     return serializer.data
 
-def getCurrentNoByClinicNo(l_clinicNo):
+def getCurrentNoByClinicNo(l_location_code, l_clinicNo):
     rtnStr = []
     try:
-        patientServiceno = hismaxdb.models.PatientServiceno.objects.get(clinic_no=l_clinicNo)
+        patientServiceno = hismaxdb.models.PatientServiceno.objects.get(location_code=l_location_code,clinic_no=l_clinicNo)
     except:
         rtnStr = [{"_status" : "error", "_status_doc" : "沒有此診間號:"+l_clinicNo}]
     else:
