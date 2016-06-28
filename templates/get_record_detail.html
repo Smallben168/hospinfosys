@@ -6,7 +6,8 @@
     <style>
         body {
             background-color: beige;
-            background-image: url("/images/viewb.png");
+            background-image: url("/static/images/viewb.png");
+            color: #761c19;
         }
         em {
             color: brown;
@@ -17,37 +18,40 @@
 
 <table border="1" width="100%">
 
-        <tr> <td colspan="10"><em>{{ view_date }} : {{ pt_name }}  藥品清單 {{STATIC_URL}} - {{ BASE_DIR }} </em> <input type="button" value="<< 上一頁 " onclick="history.back()"></td></tr>
+        <tr> <td colspan="10" bgcolor="#faebd7"><em>{{ view_date }} : {{ pt_name }}  藥品清單 {{STATIC_URL}} - {{ BASE_DIR }} </em> <input type="button" value="<< 上一頁 " onclick="history.back()"></td></tr>
         {% if dataObj  %}
             {% for row in dataObj %}
+                <em>
                 <tr>
                     {% load staticfiles %}
-                    <td rowspan="5" width="20%"><img src= "{% static row.pict  %}" WIDTH="100%" /> </td>
-                    <td width="20%"> {{ row.code }} </td>
-                    <td width="60%"> {{ row.formal_name }} / {{ row.full_name_c }}</td>
+                    <td rowspan="4" width="20%"><img src= "{% static row.pict  %}" WIDTH="100%" /> </td>
+                    <td width="20%"  bgcolor="#faebd7"> 藥品名稱 </td>
+                    <td width="60%"  bgcolor="#faebd7"> {{ row.formal_name }} / {{ row.full_name_c }}</td>
                 </tr>
                 <tr>
-                    <td>適應症</td>
-                    <td>{{ row.adapive }}</td>
+                    <td bgcolor="#faebd7">適應症</td>
+                    <td bgcolor="#faebd7">{{ row.adapive }}</td>
                 </tr>
                 <tr>
-                    <td>副作用</td>
-                    <td>{{ row.side_effect }}</td>
+                    <td bgcolor="#faebd7">副作用</td>
+                    <td bgcolor="#faebd7">{{ row.side_effect }}</td>
                 </tr>
                 <tr>
-                    <td>禁忌</td>
-                    <td>{{ row.advrerse }}</td>
+                    <td bgcolor="#faebd7">禁忌</td>
+                    <td bgcolor="#faebd7">{{ row.advrerse }}</td>
                 </tr>
                 <tr>
-                    <td>注意事項</td>
-                    <td>{{ row.note }}</td>
+                     <td bgcolor="#faebd7">{{ row.code }}</td>
+                    <td bgcolor="#faebd7">注意事項</td>
+                    <td bgcolor="#faebd7">{{ row.note }}</td>
                 </tr>
+                </em>
                 {% endfor %}
         {% else %}
-                <tr><td> 沒有藥品內容 </td></tr>
+                <tr><td bgcolor="#faebd7"> 沒有藥品內容 </td></tr>
         {% endif %}
 
-        <tr> <td colspan="10">執行時間 : {{current_time}}  </td></tr>
+        <tr> <td colspan="10" bgcolor="#faebd7">執行時間 : {{current_time}}  </td></tr>
     </table>
 </body>
 </html>

@@ -10,27 +10,27 @@
             color: #761c19;
         }
         em {
-            color: brown;
+            bgcolor:"white"
         }
     </style>
 </head>
 <body>
 <table border="1" width="100%">
-        <tr> <td colspan="10">{{ pt_name }}-就醫記錄</td></tr>
+        <tr> <td colspan="10"  bgcolor="#faebd7">{{ pt_name }}-就醫記錄</td></tr>
         {% if dataObj  %}
             {% for row in dataObj %}
                 <tr>
-                    <td width="10%"> <a href={{ row.link }} > {{ row.view_date }} </a></td>
-                    <td width="20%"> {{ row.div_name }} </td>
-                    <td width="20%"> {{ row.doctor_name }} </td>
-                    <td width="50%"> {{ row.disease_name }} </td>
+                    <td width="10%" bgcolor="#faebd7"> <a href={{ row.link }} > {{ row.view_date }} </a></td>
+                    <td width="20%" bgcolor="#faebd7"> {{ row.div_name }} </td>
+                    <td width="20%" bgcolor="#faebd7"> {{ row.doctor_name }} </td>
+                    <td width="50%" bgcolor="#faebd7"> {{ row.disease_name }} </td>
                 </tr>
             {% endfor %}
         {% else %}
-                <tr><td> 沒有看診資料 </td></tr>
+                <tr><td bgcolor="#faebd7"> 沒有看診資料 </td></tr>
         {% endif %}
 
-        <tr> <td colspan="10">執行時間 : {{current_time}}  </td></tr>
+        <tr> <td colspan="10" bgcolor="#faebd7">執行時間 : {{current_time}}  </td></tr>
     </table>
 </body>
 </html>

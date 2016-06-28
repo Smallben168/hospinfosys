@@ -310,6 +310,30 @@ def getDeptList(request, param):
 
     return Response(rtnStr, status=status.HTTP_200_OK)
 
+@api_view(['GET'])
+def getClinicNo(request, param):
+    #get?clinic_no=1
+    if request.method == 'GET':
+        #---- 取得 param ------
+        _locationCode = "10"
+        _clinicNo = request.GET.get('clinic_no')
+        apn = 1     #表全時段
+
+        rtnStr = [restwebservice.main_process.getCurrentNoByClinicNo(_locationCode,_clinicNo)]
+    else:
+        rtnStr = [{"_status":"error", "_status_doc" : "未支援此方法" }]
+
+    return Response(rtnStr, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def getTodayReg(request, param):
+    #get?chart_no=106733
+    _chartNo = request.GET.get('chart_no')
+    _cnow = utilitytools.utility_date.getTodayCDate()
+    _ptName=restwebservice.get_extdata.get_ptname(_chartNo)
+    rtnStr = restwebservice.main_process.process_reg(_chartNo,_cnow, "10",_ptName)
+    return Response(rtnStr, status=status.HTTP_200_OK)
+
 class sChart(APIView):
     """
     Table Chart
