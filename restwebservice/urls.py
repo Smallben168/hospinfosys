@@ -11,6 +11,7 @@ from restwebservice.views import p_register_device
 from restwebservice.views import p_receiver_beacon
 from restwebservice.views import getDeptList
 from restwebservice.views import getClinicNo
+from restwebservice.views import getTodayReg
 
 # Wire up our API using automatic URL routing. -ben
 # Additionally, we include login URLs for the browsable API.
@@ -23,4 +24,5 @@ urlpatterns = [
     url(r'^receiver_beacon/(?P<param>\w+)', p_receiver_beacon,name='param'),
     url(r'^getDeptList/(?P<param>\w+)', getDeptList, name='param'),
     url(r'^getClinicNo/(?P<param>\w+)', getClinicNo, name='param'),
+    url(r'^getTodayReg/(?P<param>\w+)', getTodayReg, name='param'),
 ]
