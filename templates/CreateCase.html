@@ -18,33 +18,6 @@
 </head>
 <body>
 <ol>
-    <em><li>病人預約記錄提醒通知</li></em>
-    <form id="form5" name="form5" method="post" action="/switchfun/">
-    {% csrf_token %}
-  <table width="60%" border="1">
-    <caption>
-      呼叫病人, 主動傳送訊息
-    </caption>
-    <tbody>
-      <tr>
-          <th scope="row">病歷號</th>
-          <td>
-            <input type="text" name="chart_no" placeholder="106733" width="90%" id="txt_chart_no" value="106733">
-          </td>
-      </tr>
-      <tr>
-          <th scope="row">訊息內容</th>
-          <td>
-              <textarea cols="50" rows="5" name="message">您有預約今日看診，提醒您準時前來看診, XX醫院關心您</textarea>
-          </td>
-
-      <tr>
-        <th scope="row">&nbsp;</th>
-        <td><input name="button5" type="submit" id="button5" form="form5" value="傳送訊息"></td>
-      </tr>
-    </tbody>
-  </table>
-</form>
     <em><li>建立預約病人掛號資料</li></em>
 
 <form id="form1" name="form1" method="post" action="/switchfun/">
@@ -76,6 +49,34 @@
     </tbody>
   </table>
 
+</form>
+<p>&nbsp;</p>
+        <em><li>病人預約記錄提醒通知</li></em>
+    <form id="form5" name="form5" method="post" action="/switchfun/">
+    {% csrf_token %}
+  <table width="60%" border="1">
+    <caption>
+      呼叫病人, 主動傳送訊息
+    </caption>
+    <tbody>
+      <tr>
+          <th scope="row">病歷號</th>
+          <td>
+            <input type="text" name="chart_no" placeholder="106733" width="90%" id="txt_chart_no" value="106733">
+          </td>
+      </tr>
+      <tr>
+          <th scope="row">訊息內容</th>
+          <td>
+              <textarea cols="50" rows="5" name="message">您有預約今日看診，提醒您準時前來看診, XX醫院關心您</textarea>
+          </td>
+
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input name="button5" type="submit" id="button5" form="form5" value="傳送訊息"></td>
+      </tr>
+    </tbody>
+  </table>
 </form>
 <p>&nbsp;</p>
 <em><li>建立排隊清單</li></em>
