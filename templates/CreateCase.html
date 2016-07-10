@@ -52,7 +52,7 @@
 </form>
 <p>&nbsp;</p>
         <em><li>病人預約記錄提醒通知</li></em>
-    <form id="form5" name="form5" method="post" action="/switchfun/">
+    <form id="form6" name="form6" method="post" action="/switchfun/">
     {% csrf_token %}
   <table width="60%" border="1">
     <caption>
@@ -73,7 +73,7 @@
 
       <tr>
         <th scope="row">&nbsp;</th>
-        <td><input name="button5" type="submit" id="button5" form="form5" value="傳送訊息"></td>
+        <td><input name="button6" type="submit" id="button6" form="form6" value="傳送訊息"></td>
       </tr>
     </tbody>
   </table>
@@ -209,7 +209,7 @@
           <th scope="row">訊息內容</th>
           <td>
             <select name="message">
-                <option value="您今日的看診費用為 $320， 提醒您下一次看診日期為 2016/08/15 請準時前來看診，XX醫院關心您">您今日的看診費用為 $320， XX醫院關心您</option>
+                <option value="您今日的看診費用為$320，提醒您下一次看診日期為2016/08/15請準時前來看診，XX醫院關心您">您今日的看診費用為 $320， XX醫院關心您</option>
                 <option value="您今日看診的藥品，藥局己為您準備好，請至門診藥局領藥">您今日看診的藥品，藥局己為您準備好，請至門診藥局領藥</option>
                 <option value="醫師有開立檢驗單與X光檢查單，目前X光科室有0人等待，檢驗科有5人等待，建議先至X光科室檢查.">開立檢驗單與X光檢查單建議順序</option>
             </select>

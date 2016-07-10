@@ -44,7 +44,11 @@ def switchFunction(request):
                     if fun5 != '':
                         rtnStr = otherSendMsg(request)
                     else:
-                        rtnStr = ''
+                        fun6 = request.data.get('button6', '')
+                        if fun6 != '':
+                            rtnStr = otherSendMsg(request)
+                        else:
+                            rtnStr = ''
 
     return HttpResponse(rtnStr['_status'] + ' : '+ rtnStr['_status_doc'])
 
