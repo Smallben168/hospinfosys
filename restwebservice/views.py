@@ -218,9 +218,9 @@ def p_receiver_beacon(request,param):
                 except PatientStatus.DoesNotExist:
                     #檢查是否己記錄此位址服務 : NO
                     #insert into patientStatus
-                    if writeFlag:
-                        patientstatus = PatientStatus(view_date = _cnow, chart_no = _chartno, location_code = _location)
-                        patientstatus.save()
+                    #if writeFlag:
+                    #    patientstatus = PatientStatus(view_date = _cnow, chart_no = _chartno, location_code = _location)
+                    #    patientstatus.save()
 
                     #依 location_code 執行服務
                     fun = {
@@ -280,6 +280,10 @@ def p_receiver_beacon(request,param):
                 serviceNo = '0'
 
             rtnStr = fun(item['view_date'], item['chart_no'], item['duplicate_no'], item['apn'], _cnow, serviceNo, item['location_code'])
+
+            #記錄該病人該Beacon點工作狀態己完成
+            patientstatus = PatientStatus(view_date = _cnow, chart_no = item['chart_no'], location_code = item['location_code'])
+            patientstatus.save()
 
         if rtnStr == "":
             return Response(rtnStr, status=status.HTTP_200_OK)
