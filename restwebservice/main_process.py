@@ -96,7 +96,7 @@ def update_reg(view_date, chart_no, duplicate_no, apn, cnow, service_no, locatio
         patientServicelist = hismaxdb.models.PatientServicelist(location_code=location_code, view_date=view_date, apn=apn, seq_no=service_no, chart_no=chart_no, pt_name=ptName, eff_flag='Y')
         patientServicelist.save()
 
-        rtnStr = [{"_status" : "success", "_status_doc" : "報到成功 !!", "view_no": viewNo, "except_view_time":exceptViewTime, "card_seq":cardSeq}]
+        rtnStr = [{"_status" : "success", "_status_doc" : "REG", "view_no": viewNo, "except_view_time":exceptViewTime, "card_seq":cardSeq}]
     return rtnStr
 
 
