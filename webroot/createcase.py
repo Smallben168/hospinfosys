@@ -236,6 +236,8 @@ def setPatient_serviceno(request):
     _seq_no = request.data['current_no']
 
     #1: 設定目前服務號, 偷懶未處理診間號
+    #2: 目前取號方式，Location_code 如為 10 則固定為診間 1
+    #3:
     try :
         serNoRec = hismaxdb.models.PatientServiceno.objects.get(location_code=_location_code)
     except:
@@ -247,6 +249,11 @@ def setPatient_serviceno(request):
         else:
             serNoRec.clinic_no = 0
     finally:
+        if _location_code=='10':
+            serNoRec.clinic_no = 1
+        else:
+            serNoRec.clinic_no = 0
+
         serNoRec.current_no = _seq_no
         serNoRec.save()
 

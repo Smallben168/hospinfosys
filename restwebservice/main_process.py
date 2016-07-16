@@ -54,7 +54,10 @@ def process_reg(chart_no, cnow, location_code, pt_name):
             rec['pt_name'] = pt_name
             #--- 加入 current_no ----
             code = restwebservice.get_extdata.getLocationCodeByClinic(rec['clinic'])
-            rec['current_no'] = restwebservice.get_extdata.getCurrentNoByLoc(code)
+            #取出目診診間看診號 --- 錯誤
+            #rec['current_no'] = restwebservice.get_extdata.getCurrentNoByLoc(code)
+            #取出目診診間看診號，Location_code 目前固定為 10
+            rec['current_no'] = restwebservice.get_extdata.getCurrentNoByLoc("10",rec['clinic'])
             #X-- 檢查是否產檢病人 -- 己在 REG 中新增欄位
             rec['location_code'] = location_code
             #for status response

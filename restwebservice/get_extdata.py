@@ -13,9 +13,12 @@ def getEmployeeName(l_empNo):
     return rtn
 
 #取得目前該科室之服務號
-def getCurrentNoByLoc(l_locationCode):
+def getCurrentNoByLoc(l_locationCode, l_clinicNo=0):
     try:
-        patientServiceno = hismaxdb.models.PatientServiceno.objects.get(location_code=l_locationCode)
+        if l_locationCode == "10":
+            patientServiceno = hismaxdb.models.PatientServiceno.objects.get(location_code=l_locationCode, clinic_no=l_clinicNo)
+        else:
+            patientServiceno = hismaxdb.models.PatientServiceno.objects.get(location_code=l_locationCode)
     except:
         num = 1
     else:
